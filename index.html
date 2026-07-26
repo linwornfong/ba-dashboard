@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Be Amazing Edutainment - Brand DNA & Programs Dashboard v3</title>
+<title>Be Amazing Edutainment - Strategic Dashboard v4 (SWOT + Events)</title>
 <style>
   * { box-sizing: border-box; }
   body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0f172a; color: #e2e8f0; margin: 0; padding: 20px; line-height: 1.6; }
@@ -16,28 +16,47 @@
   .stat .l { font-size: 0.9em; color: #94a3b8; }
   table { width: 100%; border-collapse: collapse; margin: 16px 0; background: #1e293b; border-radius: 8px; overflow: hidden; }
   th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #334155; font-size: 0.9em; }
-  th { background: #334155; color: #fbbf24; font-weight: 600; position: sticky; top: 0; }
+  th { background: #334155; color: #fbbf24; font-weight: 600; }
   tr:hover { background: #334155; }
   .n { text-align: right; }
-  .tag { display: inline-block; background: #334155; color: #e2e8f0; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin: 2px; }
+  .viral { color: #f87171; font-weight: bold; }
   .dna { background: #1e293b; padding: 16px; border-radius: 8px; margin: 12px 0; border-left: 4px solid #60a5fa; }
   .dna h4 { color: #60a5fa; margin: 0 0 8px 0; }
   .achv { background: #422006; padding: 12px 16px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #facc15; }
   .achv h4 { color: #facc15; margin: 0 0 4px 0; }
-  .gap { background: #14532d; padding: 12px 16px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #34d399; }
-  .gap-yellow { background: #713f12; padding: 12px 16px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #fbbf24; }
-  .viral { color: #f87171; font-weight: bold; }
-  .gold { color: #fbbf24; }
+  .quote { background: #1e293b; border-left: 4px solid #f59e0b; padding: 16px; margin: 12px 0; font-style: italic; color: #fcd34d; }
+  /* SWOT */
+  .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .swot-box { padding: 18px; border-radius: 10px; min-height: 200px; }
+  .swot-box h4 { margin: 0 0 10px 0; font-size: 1.3em; display: flex; align-items: center; gap: 8px; }
+  .swot-box ul { margin: 0; padding-left: 20px; }
+  .swot-box li { margin: 6px 0; font-size: 0.95em; }
+  .strength { background: #064e3b; border: 1px solid #34d399; }
+  .strength h4 { color: #34d399; }
+  .weakness { background: #7c1d1d; border: 1px solid #f87171; }
+  .weakness h4 { color: #f87171; }
+  .opportunity { background: #1e3a8a; border: 1px solid #60a5fa; }
+  .opportunity h4 { color: #60a5fa; }
+  .threat { background: #713f12; border: 1px solid #fbbf24; }
+  .threat h4 { color: #fbbf24; }
+  /* Services */
+  .service-card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 18px; margin: 10px 0; }
+  .service-card h4 { color: #fbbf24; margin: 0 0 8px 0; }
+  .service-tag { display: inline-block; background: #334155; color: #e2e8f0; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; margin: 2px 4px 2px 0; }
   .brand-pill { display: inline-block; background: #7c2d12; color: #fed7aa; padding: 6px 14px; border-radius: 999px; margin: 4px; font-weight: 600; }
   .channel-card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 16px; margin: 8px 0; }
   .channel-card h4 { margin: 0 0 8px 0; color: #fbbf24; }
-  .quote { background: #1e293b; border-left: 4px solid #f59e0b; padding: 16px; margin: 12px 0; font-style: italic; color: #fcd34d; }
+  .idea-card { background: linear-gradient(135deg, #1e293b, #312e81); border: 1px solid #6366f1; border-radius: 10px; padding: 16px; margin: 12px 0; }
+  .idea-card h4 { color: #a5b4fc; margin: 0 0 6px 0; }
+  .priority-high { border-left: 4px solid #f87171; }
+  .priority-med { border-left: 4px solid #fbbf24; }
+  .priority-low { border-left: 4px solid #34d399; }
 </style>
 </head>
 <body>
 
-<h1>🎬 Be Amazing Edutainment</h1>
-<p style="color:#94a3b8; font-size:1.1em; margin-top:0">สื่อสร้างสรรค์เพื่อการเรียนรู้ — ผู้นำ Edutainment ของไทย กว่า 20 ปี</p>
+<h1>🎬 Be Amazing Edutainment — Strategic Dashboard v4</h1>
+<p style="color:#94a3b8; font-size:1.1em; margin-top:0">Brand DNA • Programs • Events/Services • SWOT • Strategic Insights</p>
 
 <div class="quote">
   "เราผู้ผลิต สื่อสร้างสรรค์เพื่อการเรียนรู้ในด้านต่าง ๆ ในรูปแบบที่หลากหลาย อาทิ คลิป VDO, รายการโทรทัศน์, ละคร, Workshop, สัมมนา คาราวาน, สื่อสิ่งพิมพ์, สื่อออนไลน์ และกิจกรรมส่งเสริมกระบวนการเรียนรู้สำหรับเด็ก ครอบครัว รวมไปถึงโรงเรียนและคุณครูในทุกรูปแบบ"<br>
@@ -45,27 +64,93 @@
 </div>
 
 <div class="top">
-  <h2 style="border:none; margin-top:0">📊 สรุปภาพรวม (อัพเดท 2026-07-25)</h2>
+  <h2 style="border:none; margin-top:0">📊 สรุปภาพรวม</h2>
   <div class="stats">
     <div class="stat"><div class="v">20+</div><div class="l">ปี ประสบการณ์</div></div>
     <div class="stat"><div class="v">1,827</div><div class="l">Total Episodes</div></div>
-    <div class="stat"><div class="v">278M+</div><div class="l">Total Views (YouTube)</div></div>
-    <div class="stat"><div class="v">16</div><div class="l">Active Programs</div></div>
-    <div class="stat"><div class="v">5</div><div class="l">Co-pro ต่างประเทศ</div></div>
+    <div class="stat"><div class="v">278M+</div><div class="l">Total Views</div></div>
+    <div class="stat"><div class="v">16</div><div class="l">Programs (TV)</div></div>
+    <div class="stat"><div class="v">39</div><div class="l">videos 1M+</div></div>
     <div class="stat"><div class="v">29+</div><div class="l">Awards (Intl.)</div></div>
-    <div class="stat"><div class="v">331K</div><div class="l">YouTube Subs (Be STEAM)</div></div>
-    <div class="stat"><div class="v">965K</div><div class="l">YouTube Subs (ThaiPBS Kids)</div></div>
-    <div class="stat"><div class="v">39</div><div class="l">videos 1M+ views</div></div>
-    <div class="stat"><div class="v">75</div><div class="l">videos 500K+ views</div></div>
-    <div class="stat"><div class="v">249</div><div class="l">videos 100K+ views</div></div>
+    <div class="stat"><div class="v">5</div><div class="l">Co-pro ต่างประเทศ</div></div>
+    <div class="stat"><div class="v">3</div><div class="l">Countries (KR/JP/DE)</div></div>
   </div>
 </div>
 
-<h2>🎯 Brand Identity / อัตลักษณ์</h2>
+<!-- ============================== SWOT ============================== -->
+<h2>💎 SWOT Analysis (จุดแข็ง/จุดอ่อน/โอกาส/อุปสรรค)</h2>
+
+<div class="swot-grid">
+  <div class="swot-box strength">
+    <h4>💪 STRENGTHS (จุดแข็ง)</h4>
+    <ul>
+      <li><b>Library ใหญ่ที่สุดในไทย:</b> 1,827 ตอน ใน 16 programs — ไม่มีคู่แข่งเทียบ</li>
+      <li><b>278M+ views บน YouTube</b> — รวม 39 คลิป viral 1M+ (Top 1: จระเข้ 47.9M)</li>
+      <li><b>รางวัลนานาชาติ 29+:</b> Japan Prize, ABU Prize, Prix Jeunesse, IPST, ทีวีทองคำ, ทีวีสีขาว</li>
+      <li><b>20+ ปีประสบการณ์</b> + ทีมผู้บริหาร 4 คน (Sirichotchumnarn/Termsirikamol)</li>
+      <li><b>Co-production 3 ประเทศ:</b> 🇰🇷 EBS Korea (Beast Of Asia, Baby On The Way), 🇯🇵 NHK Japan (Mimicries), 🇩🇪 Goethe-Institut (I Got It, The Teddy's Life)</li>
+      <li><b>Multi-platform distribution:</b> TV (ALTV4, ThaiPBS, ThaiPBS Kids) + YouTube (2 ช่อง) + Facebook + TikTok + LINE + Twitter + Events</li>
+      <li><b>Brand voice ที่ชัดเจน:</b> "สนุก + สาระ + ตั้งคำถาม + ฮีโร่ของเด็กธรรมดา" — ทำซ้ำได้, scale ได้</li>
+      <li><b>Multi-format mastery:</b> TV (20min) + Half-ep (11min) + Short (60s) + Medium (5min) + Clip (2min)</li>
+      <li><b>B2B / B2G trust:</b> ได้รับความไว้วางใจจากหน่วยงานระดับประเทศทั้งภาครัฐและเอกชน</li>
+      <li><b>Flagship "บ้านนักวิทยาศาสตร์น้อย":</b> 771 ตอน 151.7M views (52% ของ views ทั้งหมด)</li>
+    </ul>
+  </div>
+
+  <div class="swot-box weakness">
+    <h4>⚠️ WEAKNESSES (จุดอ่อน)</h4>
+    <ul>
+      <li><b>Pipeline ลดลงชัดเจน:</b> Peak 271 ตอน (2022) → 51 ตอน (2026) ลด 80%</li>
+      <li><b>Newer programs underperform:</b> Money Mindset, ภารกิจพิชิตฝัน, Mad Math — 6K-19K views (แทบไม่ติด)</li>
+      <li><b>ขาด Teen content:</b> มีแค่ TIC TAC TECH 33 ep (ยังไม่ติด) — วัย 13-18 ขาดแคลน</li>
+      <li><b>ไม่มี Interactive/Live:</b> ไม่มี Live streaming, ไม่มี audience vote, ไม่มี App</li>
+      <li><b>ไม่มี Podcast / Audio-first:</b> ขาดช่องทาง audio (ขณะที่ Podcast มาแรง)</li>
+      <li><b>ช่อง YouTube ใหม่ (Be STEAM) ยังไม่แข็งแรง:</b> 331K subs vs ThaiPBS Kids 965K subs</li>
+      <li><b>ไม่มี AR/VR/3D:</b> ขาด immersive experience ที่ Gen Alpha คาดหวัง</li>
+      <li><b>สัดส่วนรายการ:</b> 800+ ตอนเป็นเรื่อง "สัตว์" — อาจถูกมองว่าซ้ำ</li>
+      <li><b>Brand awareness:</b> คนไทยทั่วไปอาจไม่รู้จัก Be Amazing แต่รู้จักรายการ</li>
+      <li><b>เว็บไซต์หลักเก่า:</b> beamazing.co.th ไม่ค่อย update, nav bar มีแต่ menu ว่าง</li>
+    </ul>
+  </div>
+
+  <div class="swot-box opportunity">
+    <h4>🌟 OPPORTUNITIES (โอกาส)</h4>
+    <ul>
+      <li><b>AI Era 2026+:</b> ความต้องการ AI Literacy สำหรับเด็ก เป็น mega-trend — ยังไม่มีเจ้าของตลาด</li>
+      <li><b>Mental Health เด็ก:</b> วัยนี้ stress/anxiety/ADHD เพิ่ม — ช่องว่างใหญ่</li>
+      <li><b>Gen Alpha:</b> ใช้ short-form (TikTok/Shorts/Reels) เป็นช่องทางหลัก — โอกาส viral แบบ H2OH</li>
+      <li><b>EdTech boom:</b> Post-COVID, พ่อแม่ยอมจ่ายเงินเพื่อการศึกษาเด็ก</li>
+      <li><b>Money/EQ Skills:</b> ขาดแคลน content ดีๆ สำหรับเด็กไทย (Money Mindset มีแล้ว แต่ยังไม่ติด)</li>
+      <li><b>Co-pro ต่างประเทศ:</b> ประสบการณ์ co-pro กับ KR/JP/DE — โอกาสต่อยอดกับอาเซียน (อินโด, ฟิลิปปินส์, สิงคโปร์)</li>
+      <li><b>Streaming Wars:</b> Netflix/Disney+ ต้องการ content เด็ก — โอกาส licensing</li>
+      <li><b>Schools & Government:</b> สพฐ. + สช. ต้องการสื่อ Edutainment คุณภาพสูงสำหรับ รร. 30,000+ แห่ง</li>
+      <li><b>Merchandise/Licensing:</b> ตัวละครจาก "บ้านนักวิทย์น้อย" สร้าง toy/ของเล่น/เสื้อผ้าได้</li>
+      <li><b>Teacher Platform:</b> ระบบ subscription สำหรับครู ดู worksheet/แผนการสอน/ใบงาน</li>
+    </ul>
+  </div>
+
+  <div class="swot-box threat">
+    <h4>🚨 THREATS (อุปสรรค)</h4>
+    <ul>
+      <li><b>YouTube algorithm เปลี่ยน:</b> Shorts อาจลด reach, เด็ก Gen Alpha ย้ายไป TikTok/Reels เต็มตัว</li>
+      <li><b>TV ratings ลดลง:</b> เด็กไทยดูทีวีน้อยลง พึ่ง TV airtime = ความเสี่ยง</li>
+      <li><b>คู่แข่งใหม่:</b> CoComelon, Ryan's World, Cocomelon-style startups เข้าไทย</li>
+      <li><b>Budget cuts ภาครัฐ:</b> งบประมาณสื่อสร้างสรรค์ลดลง → รายได้จากภาครัฐอาจหายไป</li>
+      <li><b>AI-generated content:</b> เด็ก/พ่อแม่อาจคาดหวัง content แบบ AI-personalized → traditional TV ดูช้า</li>
+      <li><b>Copyright/Piracy:</b> คลิป viral ของ BA ถูก repost บน TikTok/Facebook ทั่วไป โดยไม่ได้ credit</li>
+      <li><b>ความเสี่ยง Brand safety:</b> ข่าว fake/deepfake ทำให้ความเชื่อถือในสื่อเด็กลดลง</li>
+      <li><b>Talent shortage:</b> หาพี่เพชร/พี่โต/พี่วิว/นักวิทย์ ที่มี charisma + ความรู้ ยากขึ้น</li>
+      <li><b>Production cost:</b> ค่าถ่ายทำ + ค่า animation สูงขึ้น ขณะที่รายได้ TV ad ไม่เติบโต</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================== BRAND DNA ============================== -->
+<h2>🎯 Brand DNA / อัตลักษณ์</h2>
 
 <div class="dna">
-  <h4>🧬 แก่นของแบรนด์ (Brand DNA)</h4>
-  <div style="margin-top:8px">
+  <h4>🧬 Brand Pillars</h4>
+  <div>
     <span class="brand-pill">🎓 สื่อสร้างสรรค์เพื่อการเรียนรู้</span>
     <span class="brand-pill">🔬 วิทยาศาสตร์ + ความสนุก</span>
     <span class="brand-pill">👨‍👩‍👧 เด็ก + ครอบครัว + ครู</span>
@@ -76,21 +161,16 @@
 </div>
 
 <div class="dna">
-  <h4>📜 Mission / พันธกิจ</h4>
-  <p><b>"</b>ผลิตสื่อสร้างสรรค์เพื่อการเรียนรู้ ที่หลากหลายรูปแบบ ให้เด็กไทยและคนไทยเข้าถึงความรู้ที่ทัดเทียมนานาประเทศ<b>"</b></p>
-</div>
-
-<div class="dna">
   <h4>🎤 Be STEAM Manifesto (ช่อง YouTube ใหม่)</h4>
   <p>"<b>BESTEAM</b> เปิดโลเคชั่นแชร์เส้นทางการรับ ความรู้แนวใหม่ ที่กำลังฮิตติดเทรนด์ โดนใจทุกเพศทุกวัย ลูกเด็กเล็กแดง ตาสีตาสา ยายมียายมา ที่น่าสนใจและกำลังมาแรง ในโลกยุคสังคมโซเชี่ยล ด้วยส่วนผสมของ<b>สาระความรู้ แนวคิดแปลกๆ มันส์ๆ ตลกเฮฮา แถมจุดประกายไอเดียความสร้างสรรค์ โดยไม่มีคำว่าเป็นไปไม่ได้</b>"</p>
 </div>
 
 <div class="dna">
-  <h4>🎨 Tone of Voice / โทนเสียงของแบรนด์</h4>
+  <h4>🎨 Tone of Voice / โทนเสียง</h4>
   <ul>
-    <li><b>สนุก แต่สาระ</b> — ไม่เคยทำให้เด็กเบื่อ, แอบสอนวิทยาศาสตร์แบบไม่รู้ตัว</li>
-    <li><b>ตื่นเต้น + ใกล้ตัว</b> — สัตว์/แมลง/ปรากฏการณ์ที่พบเห็นได้ในชีวิตจริง</li>
-    <li><b>ตั้งคำถามก่อนสอน</b> — "เชื่อไหม...?", "มนุษย์กินชีสมากแค่ไหนถึงตุย?", "หนอนอยู่ในไม้ไผ่ได้ไง?"</li>
+    <li><b>สนุก แต่สาระ</b> — แอบสอนวิทยาศาสตร์แบบไม่รู้ตัว</li>
+    <li><b>ตื่นเต้น + ใกล้ตัว</b> — สัตว์/แมลง/ปรากฏการณ์ที่พบเห็นในชีวิตจริง</li>
+    <li><b>ตั้งคำถามก่อนสอน</b> — "เชื่อไหม...?", "มนุษย์กินชีสมากแค่ไหนถึงตุย?"</li>
     <li><b>ฮีโร่ของเด็กธรรมดา</b> — "เด็กไทยทำได้" (Proud เว่อร์)</li>
     <li><b>ความเห็นอกเห็นใจ</b> — "เด็กแต่ละคนมีความแตกต่าง แต่ทุกคนมีคุณค่า" (JIGSAW)</li>
   </ul>
@@ -98,277 +178,238 @@
 
 <div class="dna">
   <h4>👥 ทีมบริหาร (Executive Management)</h4>
-  <p>ผู้บริหาร 4 คน (นามสกุล Sirichotchumnarn / Termsirikamol):</p>
+  <p>4 คน (นามสกุล Sirichotchumnarn / Termsirikamol):</p>
   <ul>
     <li><b>Pichsinee Sirichotchumnarn</b> — ประธาน/ผู้ก่อตั้ง</li>
     <li><b>Ratchayoot Termsirikamol</b> — ผู้บริหาร</li>
     <li><b>Warinnet Termsirikamol</b> — ผู้บริหาร</li>
     <li><b>Pongpichate Sirichotchumnarn</b> — ผู้บริหาร</li>
   </ul>
+  <p style="margin-top:10px"><b>📍 ที่ตั้ง:</b> 737/12 ซอยลาดพร้าว 48 แยก 12 แขวงสามเสนนอก เขตห้วยขวาง กทม. 10310 | ☎ 090-569-9545 | ✉ BeAmazingTeam@gmail.com</p>
 </div>
 
+<!-- ============================== PROGRAMS ============================== -->
+<h2>📺 16 Programs (รายการที่ผลิตทั้งหมด)</h2>
+<table>
+<tr><th>#</th><th>รายการ</th><th class="n"># ตอน</th><th class="n">Total Views</th><th class="n">Max Views</th><th>Platform</th><th>Format</th><th>Target</th></tr>
+<tr style="background:#7c2d12"><td>⭐</td><td><b>บ้านนักวิทยาศาสตร์น้อย</b></td><td class="n"><b>771</b></td><td class="n"><b>151.7M</b></td><td class="n viral">47.9M</td><td>ALTV4 + ThaiPBS Kids + NSMThailand</td><td>Animation+ทดลอง</td><td>อนุบาล 0-6 ปี</td></tr>
+<tr style="background:#7c2d12"><td>⭐</td><td><b>Kid Rangers</b></td><td class="n"><b>416</b></td><td class="n"><b>44.7M</b></td><td class="n viral">3.8M</td><td>ALTV4 + ThaiPBS Kids</td><td>ภารกิจ+ลงพื้นที่</td><td>ประถม 7-12 ปี</td></tr>
+<tr style="background:#7c2d12"><td>⭐</td><td><b>คิดวิทย์</b></td><td class="n"><b>217</b></td><td class="n"><b>72.7M</b></td><td class="n viral">31.9M</td><td>ThaiPBS Kids</td><td>สืบสวน</td><td>ประถม 7-12 ปี</td></tr>
+<tr><td>4</td><td>สังคม สนุกคิด</td><td class="n">152</td><td class="n">1.6M</td><td class="n">127K</td><td>ThaiPBS Kids</td><td>เล่าเรื่อง+การ์ตูน</td><td>ประถม</td></tr>
+<tr><td>5</td><td>คิดสิ...ต้องรอด</td><td class="n">43</td><td class="n">146K</td><td class="n">24K</td><td>ThaiPBS Kids</td><td>Survival+Safety</td><td>ประถม</td></tr>
+<tr><td>6</td><td>คิดส์เรียนรู้ (Kid Rangers Clip)</td><td class="n">39</td><td class="n">745K</td><td class="n">301K</td><td>ThaiPBS Kids</td><td>Short Clip 2-min</td><td>ประถม</td></tr>
+<tr><td>7</td><td>TIC TAC TECH</td><td class="n">33</td><td class="n">44K</td><td class="n">4K</td><td>ThaiPBS</td><td>Tech Literacy</td><td>Teen 12-18 ปี</td></tr>
+<tr><td>8</td><td>JIGSAW ต่อพลังคิด</td><td class="n">27</td><td class="n">1.8M</td><td class="n viral">1.7M</td><td>ALTV4</td><td>Hero+Pride</td><td>ประถม 7-10 ปี</td></tr>
+<tr><td>9</td><td>Proud เว่อร์</td><td class="n">25</td><td class="n">4.7M</td><td class="n viral">2.2M</td><td>Be STEAM + ALTV4</td><td>สารคดีเด็กเก่ง</td><td>ทุกวัย</td></tr>
+<tr><td>10</td><td>คิดวิทย์ Science Yard</td><td class="n">25</td><td class="n">160K</td><td class="n">26K</td><td>ThaiPBS Kids</td><td>ธรรมะ+วิทย์</td><td>ประถม</td></tr>
+<tr><td>11</td><td>Kiddy Code</td><td class="n">22</td><td class="n">52K</td><td class="n">10K</td><td>ThaiPBS Kids + ALTV4</td><td>Computational Thinking</td><td>ประถม</td></tr>
+<tr><td>12</td><td>ภารกิจพิชิตฝัน (STEM Career Academy)</td><td class="n">21</td><td class="n">19K</td><td class="n">6K</td><td>ALTV4</td><td>Career Training</td><td>Teen</td></tr>
+<tr><td>13</td><td>Money Mindset ใช้เป็น เห็นเงิน</td><td class="n">15</td><td class="n">6K</td><td class="n">1K</td><td>ALTV4</td><td>Financial Literacy</td><td>วัยรุ่น</td></tr>
+<tr><td>14</td><td>Mad Math คณิตติดมันส์</td><td class="n">13</td><td class="n">16K</td><td class="n">2K</td><td>ThaiPBS Kids</td><td>Math+ฟาร์ม</td><td>ประถม</td></tr>
+<tr><td>15</td><td>คิดวิทย์ - ช่วงประดิษฐ์ และทดลอง</td><td class="n">7</td><td class="n">16K</td><td class="n">10K</td><td>ThaiPBS Kids</td><td>Short Clip</td><td>ประถม</td></tr>
+<tr><td>16</td><td>เกร็ดความรู้จาก Kid Rangers</td><td class="n">1</td><td class="n">437</td><td class="n">437</td><td>ThaiPBS Kids</td><td>Clip</td><td>ประถม</td></tr>
+<tr style="background:#1e293b; border-top:2px solid #fbbf24">
+<td colspan="2"><b>TOTAL 16 Programs</b></td><td class="n"><b>1,827</b></td><td class="n"><b>278.4M</b></td><td class="n"><b>47.9M</b></td><td colspan="3"></td>
+</tr>
+</table>
+
+<!-- ============================== EVENTS & SERVICES ============================== -->
+<h2>🎪 Events & Services (ธุรกิจเสริม)</h2>
+<p style="color:#94a3b8">นอกจากรายการทีวีและ YouTube, Be Amazing ยังมีบริการ 4 ด้านที่สร้างรายได้และ engagement ในโลกจริง</p>
+
+<div class="service-card">
+  <h4>🎪 Events (กิจกรรม/ค่าย/อีเว้น)</h4>
+  <p style="margin-top:0"><b>ประเภท:</b> งาน Event เชิง Edutainment แบบ on-ground</p>
+  <div>
+    <span class="service-tag">👨‍👩‍👧‍👦 Kid and Family Camp — ค่ายครอบครัว</span>
+    <span class="service-tag">👨‍🏫 Teacher Workshop — อบรมครู</span>
+    <span class="service-tag">🎉 Edutainment Event — อีเว้นองค์กร</span>
+    <span class="service-tag">🏫 School Tour — ทัวร์โรงเรียน</span>
+  </div>
+  <p style="margin-top:12px"><b>💡 โอกาส:</b> ต่อยอดจาก Be STEAM x ค่าย = summer camp / winter camp ขายตั๋ว, CSR activity ให้แบรนด์, Franchise ค่ายของ BA</p>
+</div>
+
+<div class="service-card">
+  <h4>📚 Medium (สื่อสิ่งพิมพ์)</h4>
+  <p style="margin-top:0"><b>ประเภท:</b> Physical media ที่ขายในร้านหนังสือ/รร.</p>
+  <div>
+    <span class="service-tag">🃏 Card Game — เกมไพ่การศึกษา</span>
+    <span class="service-tag">📖 Book — หนังสือการ์ตูน/ความรู้</span>
+    <span class="service-tag">📦 Box Set — กล่องสะสมของเล่น</span>
+  </div>
+  <p style="margin-top:12px"><b>💡 โอกาส:</b> Card Game "คิดวิทย์" / หนังสือ "บ้านนักวิทย์น้อย" / Box Set "Proud เว่อร์" ในช่อง 7-Eleven, B2S, รร.</p>
+</div>
+
+<div class="service-card">
+  <h4>📱 Media (แพลตฟอร์มดิจิทัล)</h4>
+  <p style="margin-top:0"><b>ประเภท:</b> บริการสื่อดิจิทัล</p>
+  <div>
+    <span class="service-tag">📺 TV Program</span>
+    <span class="service-tag">🎬 Clip Content Online</span>
+    <span class="service-tag">🌐 Website</span>
+    <span class="service-tag">📲 Application</span>
+  </div>
+  <p style="margin-top:12px"><b>💡 โอกาส:</b> App "Be Amazing Lab" — เด็กทดลอง virtual, เก็บ badge, ดูตอน exclusive, ซื้อของเล่น</p>
+</div>
+
+<div class="service-card">
+  <h4>🌐 International (Co-production)</h4>
+  <p style="margin-top:0"><b>5 เรื่องร่วมผลิตกับ 3 ประเทศ</b></p>
+  <div>
+    <span class="service-tag">🇰🇷 EBS Korea — Beast Of Asia, Baby On The Way</span>
+    <span class="service-tag">🇯🇵 NHK Japan — Mimicries</span>
+    <span class="service-tag">🇩🇪 Goethe-Institut — I Got It, The Teddy's Life</span>
+  </div>
+  <p style="margin-top:12px"><b>💡 โอกาส:</b> Co-pro กับอาเซียน (Indonesia, Philippines, Vietnam), Netflix Asia, Disney+ Hotstar</p>
+</div>
+
+<div class="service-card">
+  <h4>👥 Team Building & Workshop</h4>
+  <p style="margin-top:0"><b>ประเภท:</b> บริการจัดกิจกรรมสำหรับองค์กร/บริษัท</p>
+  <p>ออกแบบกิจกรรม Team Building แนว Edutainment สำหรับองค์กรที่ต้องการ "Workshop สนุก + สาระ + สร้างสรรค์" — ต่อยอดจากความเชี่ยวชาญ Edutainment ของ BA</p>
+  <p style="margin-top:12px"><b>💡 โอกาส:</b> Package "Escape Room แนววิทยาศาสตร์", Workshop "Storytelling for Business", "Innovation Lab" สำหรับ HR/Management</p>
+</div>
+
+<!-- ============================== ACHIEVEMENTS ============================== -->
 <h2>🏆 Achievements / รางวัล</h2>
 
 <div class="achv">
   <h4>🌏 รางวัลระดับนานาชาติ</h4>
   <ul>
-    <li><b>Japan Prize</b> — International Contest for Educational Media (2015, 2016, 2021) — "บ้านนักวิทยาศาสตร์น้อย" ได้ทั้ง 2nd Runner-Up และ Finalist</li>
+    <li><b>Japan Prize</b> — International Contest for Educational Media (2015, 2016, 2021) — "บ้านนักวิทยาศาสตร์น้อย"</li>
     <li><b>ABU Prize</b> (2017) — TV Children Special Commendation</li>
     <li><b>Prix Jeunesse International</b> (2018, 2020, 2022) — Finalist + Gender Equity Nominee</li>
     <li><b>Science Film Festival</b> (2018-2022) — IPST Education Award 5 ปีซ้อน</li>
-    <li><b>ทีวีทองคำ</b> (2018) — Kid Rangers ปฏิบัติการเด็กช่างคิด</li>
+    <li><b>ทีวีทองคำ</b> (2018) — Kid Rangers</li>
     <li><b>ทีวีสีขาว</b> (2021) — Kid Rangers</li>
   </ul>
 </div>
 
-<div class="achv">
-  <h4>🇹🇭 รางวัลระดับประเทศ</h4>
-  <ul>
-    <li><b>โล่ยกย่องเชิดชูเกียรติสื่อปลอดภัยและสร้างสรรค์</b> (2017) — บ้านนักวิทยาศาสตร์น้อย</li>
-    <li><b>ทุ่งควายกินอวอร์ด ครั้งที่ 10</b> (2019) — บ้านนักวิทยาศาสตร์น้อย</li>
-    <li><b>สื่อปลอดภัยและสร้างสรรค์</b> (2022) — Tic Tac Tech</li>
-  </ul>
-</div>
-
-<div class="achv">
-  <h4>🌐 Co-Productions / ร่วมผลิตต่างประเทศ</h4>
-  <ul>
-    <li><b>Beast Of Asia</b> — 🇰🇷 EBS Korea</li>
-    <li><b>Baby On The Way</b> — 🇰🇷 EBS Korea</li>
-    <li><b>Mimicries</b> — 🇯🇵 NHK Japan</li>
-    <li><b>I Got It</b> — 🇩🇪 Goethe-Institut</li>
-    <li><b>The Teddy's Life</b> — 🇩🇪 Goethe-Institut</li>
-  </ul>
-</div>
-
-<h2>📺 16 Active Programs (รายการที่ผลิตทั้งหมด)</h2>
-
-<table>
-<tr><th>#</th><th>รายการ</th><th class="n"># ตอน</th><th class="n">Total Views</th><th class="n">Max Views</th><th class="n">Avg/EP</th><th>Platform</th><th>Format</th><th>Target</th></tr>
-
-<tr style="background:#7c2d12"><td>⭐</td><td><b>บ้านนักวิทยาศาสตร์น้อย</b> (รวม ThaiPBS+NSM)</td><td class="n"><b>771</b></td><td class="n"><b>151.7M</b></td><td class="n viral">47,957,236</td><td class="n">196,710</td><td>ALTV4 + ThaiPBS Kids + NSMThailand</td><td>Animation+ทดลอง</td><td>อนุบาล 0-6 ปี</td></tr>
-<tr style="background:#7c2d12"><td>⭐</td><td><b>Kid Rangers ปฏิบัติการเด็กช่างคิด</b></td><td class="n"><b>416</b></td><td class="n"><b>44.7M</b></td><td class="n viral">3,769,466</td><td class="n">107,466</td><td>ALTV4 + ThaiPBS Kids</td><td>ภารกิจ+ลงพื้นที่</td><td>ประถม 7-12 ปี</td></tr>
-<tr style="background:#7c2d12"><td>⭐</td><td><b>คิดวิทย์ พิชิตคดีปริศนา</b></td><td class="n"><b>217</b></td><td class="n"><b>72.7M</b></td><td class="n viral">31,916,145</td><td class="n">334,798</td><td>ThaiPBS Kids</td><td>สืบสวน</td><td>ประถม 7-12 ปี</td></tr>
-
-<tr><td>4</td><td>สังคม สนุกคิด</td><td class="n">152</td><td class="n">1.6M</td><td class="n">127,492</td><td class="n">10,796</td><td>ThaiPBS Kids</td><td>เล่าเรื่อง+การ์ตูน</td><td>ประถม</td></tr>
-<tr><td>5</td><td>คิดสิ...ต้องรอด</td><td class="n">43</td><td class="n">146K</td><td class="n">24,365</td><td class="n">3,400</td><td>ThaiPBS Kids</td><td>Survival+Safety</td><td>ประถม</td></tr>
-<tr><td>6</td><td>คิดส์เรียนรู้ (Kid Rangers Clip)</td><td class="n">39</td><td class="n">745K</td><td class="n">300,708</td><td class="n">19,100</td><td>ThaiPBS Kids</td><td>Short Clip 2-min</td><td>ประถม</td></tr>
-<tr><td>7</td><td>TIC TAC TECH เรื่องไม่เล็กเทคโนโลยี</td><td class="n">33</td><td class="n">44K</td><td class="n">3,962</td><td class="n">1,344</td><td>ThaiPBS</td><td>Tech Literacy</td><td>Teen 12-18 ปี</td></tr>
-<tr><td>8</td><td>JIGSAW ต่อพลังคิด</td><td class="n">27</td><td class="n">1.8M</td><td class="n viral">1,695,772</td><td class="n">66,955</td><td>ALTV4</td><td>Hero+Pride</td><td>ประถม 7-10 ปี</td></tr>
-<tr><td>9</td><td>Proud เว่อร์</td><td class="n">25</td><td class="n">4.7M</td><td class="n viral">2,155,243</td><td class="n">188,428</td><td>Be STEAM + ALTV4</td><td>สารคดีเด็กเก่ง</td><td>ทุกวัย</td></tr>
-<tr><td>10</td><td>คิดวิทย์ Science Yard</td><td class="n">25</td><td class="n">160K</td><td class="n">25,529</td><td class="n">6,385</td><td>ThaiPBS Kids</td><td>ธรรมะ+วิทย์</td><td>ประถม</td></tr>
-<tr><td>11</td><td>Kiddy Code สนุกโค้ด สนุกคิด</td><td class="n">22</td><td class="n">52K</td><td class="n">9,849</td><td class="n">2,384</td><td>ThaiPBS Kids + ALTV4</td><td>Computational Thinking</td><td>ประถม</td></tr>
-<tr><td>12</td><td>ภารกิจพิชิตฝัน (STEM Career Academy)</td><td class="n">21</td><td class="n">19K</td><td class="n">5,812</td><td class="n">888</td><td>ALTV4</td><td>Career Training</td><td>Teen</td></tr>
-<tr><td>13</td><td>Money Mindset ใช้เป็น เห็นเงิน</td><td class="n">15</td><td class="n">6K</td><td class="n">1,372</td><td class="n">383</td><td>ALTV4</td><td>Financial Literacy</td><td>วัยรุ่น</td></tr>
-<tr><td>14</td><td>Mad Math คณิตติดมันส์</td><td class="n">13</td><td class="n">16K</td><td class="n">2,454</td><td class="n">1,214</td><td>ThaiPBS Kids</td><td>Math+ฟาร์ม</td><td>ประถม</td></tr>
-<tr><td>15</td><td>คิดวิทย์ - ช่วงประดิษฐ์ และทดลอง</td><td class="n">7</td><td class="n">16K</td><td class="n">10,098</td><td class="n">2,270</td><td>ThaiPBS Kids</td><td>Short Clip</td><td>ประถม</td></tr>
-<tr><td>16</td><td>เกร็ดความรู้จาก Kid Rangers</td><td class="n">1</td><td class="n">437</td><td class="n">437</td><td class="n">437</td><td>ThaiPBS Kids</td><td>Clip</td><td>ประถม</td></tr>
-
-<tr style="background:#1e293b; border-top:2px solid #fbbf24">
-<td colspan="2"><b>TOTAL 16 Programs (เฉพาะของ Be Amazing)</b></td><td class="n"><b>1,827</b></td><td class="n"><b>278.4M</b></td><td class="n"><b>47.9M</b></td><td class="n"><b>152,398</b></td><td colspan="3"></td>
-</tr>
-</table>
-
-<h2>🚀 Be STEAM Channel (YouTube) — 16 Playlists / 605+ ตอน</h2>
-<p>ช่องใหม่ที่เปิดตัว ~2023 — เน้น Short-form viral + multi-segment</p>
-
-<div class="channel-card">
-  <h4>🧪 Experiment / Science (EDU core) — 207 ตอน, 204M views</h4>
-  <ul>
-    <li><b>H2OH</b> (89 ep, avg 90s) — Short viral experiment, 21M max — 🏆 flagship viral</li>
-    <li><b>Nature เจอนี่</b> (123 ep) — สารคดีสัตว์สั้น 60s-9m, หมูเด้ง 1.7M views</li>
-    <li><b>PlaySTEAMtion</b> (18 ep) — ของเล่นวิทยาศาสตร์ Catapult/Pop Pop Boat/Solar</li>
-    <li><b>เต็ม STEAM</b> (8 ep) — คุยกับครู/ผู้เชี่ยวชาญ เรื่องกระแส</li>
-    <li><b>STEMไปไหน?</b> (3 ep) — บุกเกาหลี STEAM Education</li>
-  </ul>
-</div>
-
-<div class="channel-card">
-  <h4>🧠 Think / Want to Know (Curiosity) — 100 ตอน, 2.6M views</h4>
-  <ul>
-    <li><b>Think ต๊อง ต้อง Think</b> (93 ep) — คำถามต๊อง ๆ: "กินชีสมากแค่ไหนถึงตุย", "ตด", "ผีอำ"</li>
-    <li><b>เฮ้ย จริงปะเนี่ย !?</b> (11 ep) — เรื่องเหลือเชื่อ: 3D printing/อียิปต์ 4000 ปี</li>
-    <li><b>Detective</b> (18 ep) — สืบคดี 60s</li>
-  </ul>
-</div>
-
-<div class="channel-card">
-  <h4>⚠️ Watch Out / Caution (Safety) — 43 ตอน, 36K views</h4>
-  <ul>
-    <li><b>เชื่อไหมผู้ใหญ่บอกว่า</b> (29 ep) — Fact vs Myth: PM 2.5/ชานมไข่มุก/อั้นฉี่</li>
-    <li><b>Cyber Ranger แก๊งป่วนพิทักษ์ภัยไซเบอร์</b> (14 ep) — Deepfake/บูลลี่/บุหรี่ไฟฟ้า</li>
-  </ul>
-</div>
-
-<div class="channel-card">
-  <h4>💪 Inspiration / Pride (Hero) — 74 ตอน, 509K views</h4>
-  <ul>
-    <li><b>Proud เว่อร์</b> (25 ep + 49 Shorts = 74) — เด็กเก่ง/อาชีพ/ความสามารถ — 2.15M max</li>
-  </ul>
-</div>
-
-<h2>🔥 Top 30 Viral Champions (อัพเดทใหม่)</h2>
+<!-- ============================== TOP VIRAL ============================== -->
+<h2>🔥 Top 20 Viral Champions (278M views)</h2>
 <table>
 <tr><th>#</th><th>Views</th><th>Title</th><th>Playlist</th></tr>
-<tr><td>1</td><td class="n viral">47,957,236</td><td>รายการบ้านนักวิทยาศาสตร์น้อย ปี 3 ตอนที่ 206 จระเข้</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>2</td><td class="n viral">31,916,145</td><td>พืชกินแมลง | ชวนคิดกับนักวิทย์น้อย</td><td>คิดวิทย์</td></tr>
-<tr><td>3</td><td class="n viral">10,331,187</td><td>รายการบ้านนักวิทยาศาสตร์น้อย ปี 3 ตอนที่ 123 เล็บ</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>4</td><td class="n viral">8,503,297</td><td>ดินน้ำมัน | บ้านนักวิทยาศาสตร์น้อย</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>5</td><td class="n viral">7,385,385</td><td>สนุกกับชอล์ก | บ้านนักวิทยาศาสตร์น้อย</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>6</td><td class="n viral">7,258,687</td><td>ดินเหนียว | บ้านนักวิทยาศาสตร์น้อย</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
+<tr><td>1</td><td class="n viral">47,957,236</td><td>จระเข้ (บ้านนักวิทย์น้อย ปี 3)</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
+<tr><td>2</td><td class="n viral">31,916,145</td><td>พืชกินแมลง (ชวนคิดกับนักวิทย์น้อย)</td><td>คิดวิทย์</td></tr>
+<tr><td>3</td><td class="n viral">10,331,187</td><td>เล็บ (บ้านนักวิทย์น้อย ปี 3)</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
+<tr><td>4</td><td class="n viral">8,503,297</td><td>ดินน้ำมัน</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
+<tr><td>5</td><td class="n viral">7,385,385</td><td>สนุกกับชอล์ก</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
+<tr><td>6</td><td class="n viral">7,258,687</td><td>ดินเหนียว</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
 <tr><td>7</td><td class="n viral">7,121,777</td><td>สนุกกับดินสุดแข็งแกร่ง #Shorts</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>8</td><td class="n viral">5,065,528</td><td>รายการ บ้านนักวิทยาศาสตร์น้อย ปี 2 ตอนที่ 2 ไอศกรีม</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>9</td><td class="n viral">4,542,360</td><td>เกราะกันภัยสัตว์ : ชวนคิดกับนักวิทย์น้อย</td><td>คิดวิทย์</td></tr>
+<tr><td>8</td><td class="n viral">5,065,528</td><td>ไอศกรีม (บ้านนักวิทย์น้อย ปี 2)</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
+<tr><td>9</td><td class="n viral">4,542,360</td><td>เกราะกันภัยสัตว์ (ชวนคิด)</td><td>คิดวิทย์</td></tr>
 <tr><td>10</td><td class="n viral">4,341,867</td><td>มหัศจรรย์ปลาตีน</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
 <tr><td>11</td><td class="n viral">4,333,845</td><td>หอยทากกระดุ๊กดิ๊ก</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>12</td><td class="n viral">3,796,779</td><td>ดิน : ชวนคิดกับนักวิทย์น้อย</td><td>คิดวิทย์</td></tr>
+<tr><td>12</td><td class="n viral">3,796,779</td><td>ดิน (ชวนคิดกับนักวิทย์น้อย)</td><td>คิดวิทย์</td></tr>
 <tr><td>13</td><td class="n viral">3,769,466</td><td>ฝึกวิทยายุทธเชิดสิงโต</td><td>Kid Rangers</td></tr>
-<tr><td>14</td><td class="n viral">3,768,154</td><td>ไข่ : ชวนคิดกับนักวิทย์น้อย</td><td>คิดวิทย์</td></tr>
+<tr><td>14</td><td class="n viral">3,768,154</td><td>ไข่ (ชวนคิดกับนักวิทย์น้อย)</td><td>คิดวิทย์</td></tr>
 <tr><td>15</td><td class="n viral">3,064,990</td><td>แบตเตอรี่จอมพลัง</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
 <tr><td>16</td><td class="n viral">2,920,877</td><td>กิ้งกือ VS ไส้เดือน</td><td>Kid Rangers</td></tr>
 <tr><td>17</td><td class="n viral">2,884,367</td><td>หนอนไม้ไผ่</td><td>Kid Rangers</td></tr>
 <tr><td>18</td><td class="n viral">2,406,185</td><td>กระเบนน้ำจืด</td><td>Kid Rangers</td></tr>
 <tr><td>19</td><td class="n viral">2,155,243</td><td>สิงโตน้อย ยอดนักเชิด</td><td>Proud เว่อร์</td></tr>
 <tr><td>20</td><td class="n viral">2,058,294</td><td>น้ำอัดลมซู่ซ่า</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>21</td><td class="n viral">2,033,364</td><td>เทียนไข</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>22</td><td class="n viral">1,896,887</td><td>การพรางตัว : ชวนคิดกับนักวิทย์น้อย</td><td>คิดวิทย์</td></tr>
-<tr><td>23</td><td class="n viral">1,858,320</td><td>หนอนริบบิ้น</td><td>Kid Rangers</td></tr>
-<tr><td>24</td><td class="n viral">1,818,571</td><td>"ทราย" เกิดจากอะไรนะ</td><td>คิดวิทย์</td></tr>
-<tr><td>25</td><td class="n viral">1,797,650</td><td>นกแคสโซแวรี</td><td>Kid Rangers</td></tr>
-<tr><td>26</td><td class="n viral">1,727,949</td><td>ความลับของน้ำตาลเส้น (สายไหม)</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>27</td><td class="n viral">1,704,438</td><td>ปูเสฉวน</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>28</td><td class="n viral">1,699,722</td><td>รู้เท่าทันงู</td><td>Kid Rangers</td></tr>
-<tr><td>29</td><td class="n viral">1,695,772</td><td>นักขับรถแบ็กโฮน้อย</td><td>JIGSAW</td></tr>
-<tr><td>30</td><td class="n viral">1,500,670</td><td>ดาวทะเล</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
 </table>
 
-<h2>🎬 Format Distribution</h2>
-<table>
-<tr><th>Format</th><th>Programs</th><th>Avg Duration</th><th>Sweet Spot</th></tr>
-<tr><td>📺 Full Episode (15-25 min)</td><td>Kid Rangers, คิดวิทย์, สังคมสนุกคิด, TIC TAC TECH, JIGSAW, ภารกิจพิชิตฝัน, Money Mindset</td><td>~20 min</td><td>TV premiere + YouTube full</td></tr>
-<tr><td>📺 Half Episode (10-15 min)</td><td>บ้านนักวิทย์น้อย, Kiddy Code, Proud เว่อร์, Science Yard, Mad Math, คิดสิ...ต้องรอด</td><td>~11 min</td><td>TV + YouTube</td></tr>
-<tr><td>📱 Short (60-90s)</td><td>H2OH, Detective, Nature Shorts, Think Shorts, เฮ้ย จริงปะเนี่ย, คิดวิทย์ Clip</td><td>~60s</td><td>YouTube Shorts + TikTok</td></tr>
-<tr><td>📱 Medium Short (2-7 min)</td><td>เชื่อไหมผู้ใหญ่บอกว่า, Cyber Ranger, PlaySTEAMtion</td><td>~5 min</td><td>YouTube + Facebook</td></tr>
-<tr><td>🎞️ Clip (1-4 min)</td><td>เกร็ดความรู้ Kid Rangers, คิดส์เรียนรู้</td><td>~2 min</td><td>YouTube + Social</td></tr>
-</table>
+<!-- ============================== CHANNELS ============================== -->
+<h2>📡 Distribution Channels</h2>
 
+<div class="channel-card">
+  <h4>📺 TV</h4>
+  <p>ALTV ช่อง 4 (ทีวีเรียนสนุก), ThaiPBS, ThaiPBS Kids</p>
+</div>
+
+<div class="channel-card">
+  <h4>📱 YouTube</h4>
+  <p><b>ThaiPBS Kids</b> (965K subs) — Kid Rangers, บ้านวิทย์, คิดวิทย์, JIGSAW, Kiddy Code, สังคมสนุกคิด, คิดสิ...ต้องรอด</p>
+  <p><b>Be STEAM</b> (331K subs) — H2OH, Detective, Think ต๊อง, Cyber Ranger, Nature เจอนี่, PlaySTEAMtion, เฮ้ย จริงปะเนี่ย, เชื่อไหม, Proud เว่อร์</p>
+  <p><b>NSMThailand</b> — บ้านนักวิทยาศาสตร์น้อย ปี 1-4 + 2568 (รวม 274 ep)</p>
+</div>
+
+<div class="channel-card">
+  <h4>📘 Social Media</h4>
+  <p>Facebook (KidRangersTV, Kidwittv, Witnoi, Jigsaw, สังคม สนุกคิด) • TikTok (@besteam_channel, @sparkez.bamz) • LINE Official (Be STEAM) • Twitter (@besteamchannel)</p>
+</div>
+
+<!-- ============================== GAP ============================== -->
 <h2>🎯 ช่องว่างที่ยังไม่ได้ทำ (Open Opportunities)</h2>
 
-<div class="gap">
+<div class="dna" style="background:#14532d; border-left:4px solid #34d399;">
   <h4>✅ Topic ที่ทำแล้ว (อย่า propose ซ้ำ)</h4>
-  <ul>
-    <li>💰 <b>Money / Financial Literacy</b> — มีแล้ว: <b>Money Mindset ใช้เป็น เห็นเงิน</b> (15 ep, ALTV4)</li>
-    <li>🏕️ <b>Survival / เอาตัวรอด</b> — มีแล้ว: <b>คิดสิ...ต้องรอด</b> (43 ep, ThaiPBS Kids)</li>
-    <li>🤖 <b>Cyber Safety</b> — มีแล้ว: Cyber Ranger แก๊งป่วนพิทักษ์ภัยไซเบอร์ (14 ep)</li>
-    <li>💻 <b>Tech Literacy</b> — มีแล้ว: TIC TAC TECH (33 ep), Kiddy Code (22 ep)</li>
-    <li>🦸 <b>Career / อาชีพ</b> — มีแล้ว: ภารกิจพิชิตฝัน (21 ep), Proud เว่อร์ (25 ep)</li>
-    <li>🔢 <b>Math</b> — มีแล้ว: Mad Math คณิตติดมันส์ (13 ep)</li>
-    <li>🐊 <b>สัตว์/แมลง/สัตว์เลื้อยคลาน</b> — มีแล้ว 800+ ตอน (Kid Rangers + บ้านวิทย์ + คิดวิทย์ + H2OH + Nature เจอนี่)</li>
-  </ul>
+  <p>Money Mindset • คิดสิ...ต้องรอด (Survival) • Cyber Ranger (Cyber Safety) • TIC TAC TECH (Tech Literacy) • Kiddy Code (Computational) • ภารกิจพิชิตฝัน (Career) • Mad Math • สัตว์/แมลง/ธรรมชาติ (800+ ตอน)</p>
 </div>
 
-<div class="gap-yellow">
+<div class="dna" style="background:#713f12; border-left:4px solid #fbbf24;">
   <h4>🆕 Topic ที่ยังไม่มี = โอกาสใหม่</h4>
-  <ul>
-    <li>🧠 <b>Mental Health เด็ก</b> — ยังไม่มี (วัยนี้ stress/anxiety/ADHD)</li>
-    <li>🤖 <b>AI Literacy (ใช้ AI อย่างสร้างสรรค์)</b> — มีแค่เรื่อง safety, ยังไม่มี "วิธีใช้ AI"</li>
-    <li>🌱 <b>Climate Action / Sustainability</b> — มีน้อย</li>
-    <li>🎮 <b>Esports / Game Design / Game-based learning</b> — ไม่มี (Gen Alpha ใช้เวลากับเกมเยอะ)</li>
-    <li>💕 <b>EQ / Relationship / Social Skills</b> — ไม่มี</li>
-    <li>🏃 <b>Sports / Physical Activity / กีฬา</b> — ไม่มี</li>
-    <li>🎨 <b>Art / Music / Dance / Creative Writing</b> — มีน้อย</li>
-    <li>👫 <b>Teen (13-18 ปี) เชิงลึก</b> — TIC TAC TECH พอเข้าขา, แต่ยังน้อย</li>
-    <li>🧬 <b>Health / Nutrition / Body / Puberty</b> — มีน้อย</li>
-    <li>🧓 <b>Intergenerational / ผู้สูงอายุ</b> — ไม่มี</li>
-    <li>🌏 <b>ASEAN / International Cultures (สมัยใหม่)</b> — มีน้อย</li>
-    <li>🌗 <b>Real-life LIVE / Interactive / Audience vote</b> — ไม่มี</li>
-    <li>📱 <b>AR/VR/3D Experience</b> — ไม่มี</li>
-    <li>🎙️ <b>Podcast เด็ก / Audio-first</b> — ไม่มี</li>
-  </ul>
+  <p>🧠 <b>Mental Health เด็ก</b> | 🤖 <b>AI Literacy</b> (ใช้ AI สร้างสรรค์) | 🌱 <b>Climate Action/Sustainability</b> | 🎮 <b>Esports/Game Design</b> | 💕 <b>EQ/Relationship</b> | 🏃 <b>Sports/Physical</b> | 🎨 <b>Art/Music/Creative</b> | 👫 <b>Teen 13-18 เชิงลึก</b> | 🧬 <b>Health/Nutrition/Puberty</b> | 🧓 <b>Intergenerational</b> | 🌏 <b>ASEAN Cultures</b> | 🌗 <b>Live/Interactive</b> | 📱 <b>AR/VR/3D</b> | 🎙️ <b>Podcast</b></p>
 </div>
 
-<h2>📅 Production Timeline (10 ปี)</h2>
-<table>
-<tr><th>Year</th><th class="n">Total Ep</th><th>Key Milestones</th></tr>
-<tr><td>2016</td><td class="n">29</td><td>คิดวิทย์ Science Yard, ช่วงประดิษฐ์/ทดลอง</td></tr>
-<tr><td>2017</td><td class="n">30</td><td>Kid Rangers S1</td></tr>
-<tr><td>2018</td><td class="n">50</td><td>Kid Rangers S2, เกร็ดความรู้</td></tr>
-<tr><td>2019</td><td class="n">44</td><td>Kid Rangers</td></tr>
-<tr style="background:#7c2d12"><td><b>2020</b></td><td class="n"><b>262</b></td><td>🚀 <b>PEAK START</b></td></tr>
-<tr style="background:#7c2d12"><td><b>2021</b></td><td class="n"><b>257</b></td><td>🚀 <b>PEAK</b></td></tr>
-<tr style="background:#7c2d12"><td><b>2022</b></td><td class="n"><b>271</b></td><td>🚀 <b>PEAK</b></td></tr>
-<tr style="background:#7c2d12"><td><b>2023</b></td><td class="n"><b>268</b></td><td>🚀 <b>PEAK</b></td></tr>
-<tr><td>2024</td><td class="n">105</td><td>📉 ลดลง</td></tr>
-<tr><td>2025</td><td class="n">103</td><td>📉 Kid Rangers 37, Proud เว่อร์ 25</td></tr>
-<tr><td>2026</td><td class="n">51</td><td>Kid Rangers 21, บ้านนักวิทย์น้อย 19 (YTD)</td></tr>
-</table>
+<!-- ============================== STRATEGIC IDEAS ============================== -->
+<h2>💡 แนวทาง/ไอเดียเชิงกลยุทธ์ (จากข้อมูลจริง)</h2>
 
-<h2>💡 Brand Voice Patterns (จาก 1,827 descriptions)</h2>
-
-<div class="dna">
-  <h4>🗣️ Hook Patterns ที่ใช้บ่อย</h4>
-  <ul>
-    <li><b>"ภารกิจในครั้งนี้..."</b> — Kid Rangers style</li>
-    <li><b>"มีเรื่องชวนสงสัย..."</b> — คิดวิทย์ style</li>
-    <li><b>"สัปดาห์นี้ !! คิดวิทย์..."</b> — สับดาห์ นักสืบตามหา</li>
-    <li><b>"เชื่อไหม...?"</b> — Fact vs Myth</li>
-    <li><b>"ทำไงดี!?"</b> — H2OH viral</li>
-    <li><b>"ฮีโร่ของ..."</b> — JIGSAW</li>
-    <li><b>"เด็กไทยทำได้"</b> — Proud เว่อร์</li>
-    <li><b>"มนุษย์...ทำได้ไหม?"</b> — Think ต๊อง</li>
-  </ul>
+<div class="idea-card priority-high">
+  <h4>🔴 Priority #1: เร่ง Pipeline กลับเข้า 200+ ตอน/ปี</h4>
+  <p><b>ปัญหา:</b> Pipeline ลด 80% (271 → 51 ตอน) — ถ้า trend เป็นเช่นนี้ต่อ อาจสูญเสีย momentum</p>
+  <p><b>แนวทาง:</b> ใช้ AI/automation ในการตัดต่อ + repurposing content เก่าเป็น Shorts/Clip → ลดเวลา post-production 30%</p>
+  <p><b>Quick win:</b> เอา 800+ ตอนเก่าของ "บ้านนักวิทย์น้อย" มาตัดเป็น Shorts (60s) → 1,400+ Shorts ใหม่</p>
 </div>
 
-<div class="dna">
-  <h4>📡 ช่องทางจัดจำหน่าย (Multi-platform)</h4>
-  <ul>
-    <li><b>📺 TV</b> — ALTV ช่อง 4 (ทีวีเรียนสนุก), ThaiPBS, ThaiPBS Kids</li>
-    <li><b>📱 YouTube</b> — ThaiPBS Kids (965K subs), Be STEAM (331K subs)</li>
-    <li><b>📘 Facebook</b> — KidRangersTV, Kidwittv, Witnoi, Jigsaw, สังคม สนุกคิด</li>
-    <li><b>🎵 TikTok</b> — @besteam_channel, @sparkez.bamz</li>
-    <li><b>💬 LINE Official</b> — Be STEAM</li>
-    <li><b>🐦 Twitter</b> — @besteamchannel</li>
-    <li><b>🌐 Website</b> — beamazing.co.th, thaipbs.or.th, thaipbskids</li>
-    <li><b>📚 สื่อสิ่งพิมพ์</b> — Card Game, Book, Box Set</li>
-    <li><b>🎪 Events</b> — Kid Camp, Family Camp, Teacher Workshop, School Tour, Edutainment Event</li>
-  </ul>
+<div class="idea-card priority-high">
+  <h4>🔴 Priority #2: เปิด "AI Lab" รายการใหม่</h4>
+  <p><b>โอกาส:</b> AI Literacy = mega-trend 2026+ — ไม่มีเจ้าของตลาดในไทย</p>
+  <p><b>Format:</b> เด็ก 10-15 ปี เรียน AI ผ่านเกม + โปรเจกต์จริง (เขียน prompt, ทำ chatbot, สร้างภาพ)</p>
+  <p><b>Target:</b> ตลาด 50 ล้านบาท+ (EdTech เติบโต 25% ต่อปี)</p>
+  <p><b>Brand fit:</b> ใช้จุดแข็ง "สนุก + สาระ" ของ BA + เพิ่ม "ทักษะแห่งอนาคต"</p>
 </div>
 
-<h2>🎯 สรุปผู้บริหาร (Executive Summary)</h2>
-
-<div class="dna">
-  <h4>🏢 Be Amazing Edutainment ใน 1 ประโยค</h4>
-  <p><b>"Production House Edutainment อันดับ 1 ของไทย ที่ผลิต 1,827 ตอน/16 รายการ ครอบคลุม 3 ช่อง (ALTV4 + ThaiPBS Kids + Be STEAM) มี 278M+ views บน YouTube ได้รางวัลนานาชาติ 29+ รางวัล และ Co-production กับเกาหลี/ญี่ปุ่น/เยอรมัน"</b></p>
+<div class="idea-card priority-high">
+  <h4>🔴 Priority #3: License "บ้านนักวิทย์น้อย" ไปอาเซียน</h4>
+  <p><b>โอกาส:</b> มี 5 co-pro อยู่แล้วกับ KR/JP/DE — ขยายไปอาเซียน (อินโด 270M คน, ฟิลิปปินส์ 110M, เวียดนาม 100M)</p>
+  <p><b>Asset:</b> 771 ตอน 151.7M views เป็นหลักฐานว่า content ดี — ขาย format license</p>
+  <p><b>Revenue model:</b> License fee + Royalty 5-10% ต่อตอน (อิง Netflix kids content ราคา)</p>
 </div>
 
-<div class="dna">
-  <h4>💎 จุดแข็งหลัก (Key Strengths)</h4>
-  <ol>
-    <li><b>Library ใหญ่:</b> 1,827 ตอน — ไม่มีคู่แข่งในไทย</li>
-    <li><b>Multi-format:</b> TV (ALTV4 + ThaiPBS) + YouTube (2 ช่อง) + Social + Live Events</li>
-    <li><b>Multi-age:</b> อนุบาล 0-6 → ประถม 7-12 → วัยรุ่น 13-18</li>
-    <li><b>Multi-genre:</b> Science + Nature + Tech + Pride + Survival + Money + Career + Social</li>
-    <li><b>รางวัลระดับโลก:</b> Japan Prize, ABU, Prix Jeunesse, IPST</li>
-    <li><b>Co-production:</b> 5 เรื่องร่วมกับ 3 ประเทศ (เกาหลี/ญี่ปุ่น/เยอรมัน)</li>
-    <li><b>20+ ปี:</b> ความเชี่ยวชาญที่สะสมมา</li>
-    <li><b>ผลงาน viral:</b> 39 คลิป 1M+ views (Top 1: จระเข้ 47.9M)</li>
-  </ol>
+<div class="idea-card priority-med">
+  <h4>🟡 Priority #4: เปิด Interactive Live + AR App</h4>
+  <p><b>ปัญหา:</b> ไม่มี Interactive/Live/AR/VR — เด็ก Gen Alpha คาดหวัง</p>
+  <p><b>แนวทาง:</b> Live streaming ทดลองวิทยาศาสตร์ + ให้เด็กโหวตผ่านแอป → ตอน popular ต่อยอดเป็น series</p>
+  <p><b>Quick win:</b> Live รายสัปดาห์ "Be STEAM Lab" 1 ชม. บน YouTube + TikTok → ดูว่า engagement เป็นยังไง</p>
 </div>
 
-<div class="dna">
-  <h4>⚠️ จุดที่ต้องระวัง</h4>
-  <ul>
-    <li><b>Pipeline ลดลง:</b> จาก 271 ตอน (2022) เหลือ 51 ตอน (2026) — ต้องเร่งผลิต</li>
-    <li><b>New channels underperform:</b> Money Mindset, ภารกิจพิชิตฝัน, Mad Math มี views น้อย (ยังใหม่)</li>
-    <li><b>Be STEAM Channel</b> มี viral แต่หลาย segment ยังไม่ติด</li>
-  </ul>
+<div class="idea-card priority-med">
+  <h4>🟡 Priority #5: ขยาย Teen Segment (13-18 ปี)</h4>
+  <p><b>Gap:</b> มีแค่ TIC TAC TECH (33 ep, 44K views) — Teen ตลาดใหญ่ แต่ไม่มี content</p>
+  <p><b>แนวทาง:</b> รายการใหม่ "Real Teen" — เด็กวัยรุ่นแก้ปัญหาจริง + เรียนรู้ financial/eQ/career แบบ peer-to-peer</p>
+  <p><b>Format:</b> Short-form 3-7 min + TikTok-style</p>
+</div>
+
+<div class="idea-card priority-med">
+  <h4>🟡 Priority #6: ขยาย Events เป็น Franchise</h6>
+  <p><b>Asset:</b> มี Kid Camp / Family Camp / Teacher Workshop อยู่แล้ว</p>
+  <p><b>แนวทาง:</b> Franchise "Be Amazing Camp" — ขาย license ให้ รร. เอกชน / ศูนย์การค้า จัดค่ายในแบรนด์ BA</p>
+  <p><b>Revenue:</b> License 200K-500K / camp / brand</p>
+</div>
+
+<div class="idea-card priority-low">
+  <h4>🟢 Priority #7: เปิด "Be Amazing Podcast"</h4>
+  <p><b>Gap:</b> ไม่มี audio-first content</p>
+  <p><b>แนวทาง:</b> Podcast เด็ก — เล่าเรื่องวิทยาศาสตร์ + สัมภาษณ์นักวิทยาศาสตร์ไทย (15-30 min)</p>
+  <p><b>Platform:</b> Spotify, Apple Podcast, YouTube Music</p>
+</div>
+
+<div class="idea-card priority-low">
+  <h4>🟢 Priority #8: Merchandise / Character Licensing</h8>
+  <p><b>Asset:</b> ตัวละครจาก "บ้านนักวิทย์น้อย" น่ารัก + ติดตลาด</p>
+  <p><b>แนวทาง:</b> License ให้ผู้ผลิตของเล่น/เสื้อผ้า/กระเป๋า/สมุด → passive income</p>
+  <p><b>Case study:</b> CoComelon ทำเงิน 80% จาก merchandise ไม่ใช่ ads</p>
 </div>
 
 <hr style="margin: 40px 0; border-color: #334155;">
 <p style="color:#94a3b8; text-align:center">
   📁 Source: <b>beamazing.co.th</b> + YouTube (ThaiPBS Kids, Be STEAM, NSMThailand, ALTV4) | 
-  📅 Dashboard updated: 2026-07-25 | 
-  📊 Dataset: <b>1,827 วิดีโอ, 278.4M views, 16 programs, 29+ รางวัล</b>
+  📅 Dashboard v4 updated: 2026-07-25 | 
+  📊 Dataset: <b>1,827 วิดีโอ, 278.4M views, 16 programs, 5 co-pro, 29+ awards</b><br>
+  🌐 <b>Live URL:</b> https://linwornfong.github.io/ba-dashboard/
 </p>
 
 </body>
