@@ -2,61 +2,242 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Be Amazing Edutainment - Strategic Dashboard v4 (SWOT + Events)</title>
+<title>Be Amazing Edutainment - Strategic Dashboard v5 (CI Original)</title>
 <style>
+  /* ====== Be Amazing Brand CI ======
+     Primary: #F0A800 (Gold)
+     Accent: #F0A818 (Gold Light)
+     Background: #0a0a0a (Pure Black)
+     Surface: #1a1a1a (Dark Gray)
+     Text: #F5F5F5 (Off White)
+     Muted: #888888 (Gray)
+  */
   * { box-sizing: border-box; }
-  body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0f172a; color: #e2e8f0; margin: 0; padding: 20px; line-height: 1.6; }
-  h1 { color: #fbbf24; font-size: 2.2em; margin: 0 0 8px 0; }
-  h2 { color: #60a5fa; border-bottom: 2px solid #334155; padding-bottom: 8px; margin-top: 40px; }
-  h3 { color: #34d399; margin-top: 24px; }
-  .top { background: linear-gradient(135deg, #1e293b, #334155); padding: 24px; border-radius: 12px; margin-bottom: 20px; }
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 20px 0; }
-  .stat { background: #1e293b; padding: 16px; border-radius: 8px; border-left: 4px solid #fbbf24; }
-  .stat .v { font-size: 1.8em; font-weight: bold; color: #fbbf24; }
-  .stat .l { font-size: 0.9em; color: #94a3b8; }
-  table { width: 100%; border-collapse: collapse; margin: 16px 0; background: #1e293b; border-radius: 8px; overflow: hidden; }
-  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #334155; font-size: 0.9em; }
-  th { background: #334155; color: #fbbf24; font-weight: 600; }
-  tr:hover { background: #334155; }
-  .n { text-align: right; }
-  .viral { color: #f87171; font-weight: bold; }
-  .dna { background: #1e293b; padding: 16px; border-radius: 8px; margin: 12px 0; border-left: 4px solid #60a5fa; }
-  .dna h4 { color: #60a5fa; margin: 0 0 8px 0; }
-  .achv { background: #422006; padding: 12px 16px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #facc15; }
-  .achv h4 { color: #facc15; margin: 0 0 4px 0; }
-  .quote { background: #1e293b; border-left: 4px solid #f59e0b; padding: 16px; margin: 12px 0; font-style: italic; color: #fcd34d; }
-  /* SWOT */
-  .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
-  .swot-box { padding: 18px; border-radius: 10px; min-height: 200px; }
-  .swot-box h4 { margin: 0 0 10px 0; font-size: 1.3em; display: flex; align-items: center; gap: 8px; }
-  .swot-box ul { margin: 0; padding-left: 20px; }
-  .swot-box li { margin: 6px 0; font-size: 0.95em; }
-  .strength { background: #064e3b; border: 1px solid #34d399; }
-  .strength h4 { color: #34d399; }
-  .weakness { background: #7c1d1d; border: 1px solid #f87171; }
-  .weakness h4 { color: #f87171; }
-  .opportunity { background: #1e3a8a; border: 1px solid #60a5fa; }
-  .opportunity h4 { color: #60a5fa; }
-  .threat { background: #713f12; border: 1px solid #fbbf24; }
-  .threat h4 { color: #fbbf24; }
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #0a0a0a;
+    color: #F5F5F5;
+    margin: 0;
+    padding: 24px;
+    line-height: 1.6;
+  }
+  h1 {
+    color: #F0A800;
+    font-size: 2.4em;
+    margin: 0 0 6px 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  h1::before {
+    content: "●";
+    color: #F0A800;
+    margin-right: 12px;
+    font-size: 0.7em;
+    vertical-align: middle;
+  }
+  h2 {
+    color: #F0A800;
+    border-bottom: 2px solid #F0A800;
+    padding-bottom: 10px;
+    margin-top: 48px;
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  h3 { color: #F0A818; margin-top: 24px; font-weight: 600; }
+  h4 { color: #F0A818; margin: 0 0 8px 0; font-weight: 600; }
+
+  .top {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    border: 1px solid #F0A800;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .stat {
+    background: #1a1a1a;
+    padding: 18px;
+    border-radius: 8px;
+    border-left: 4px solid #F0A800;
+  }
+  .stat .v {
+    font-size: 2em;
+    font-weight: bold;
+    color: #F0A800;
+  }
+  .stat .l {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 4px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #2a2a2a;
+    font-size: 0.92em;
+  }
+  th {
+    background: #222;
+    color: #F0A800;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+  }
+  tr:hover { background: #222; }
+  tr.star td { background: #2a2418; }
+  .n { text-align: right; font-variant-numeric: tabular-nums; }
+  .viral { color: #F0A800; font-weight: bold; }
+
+  .quote {
+    background: #1a1a1a;
+    border-left: 4px solid #F0A800;
+    padding: 18px 24px;
+    margin: 16px 0;
+    font-style: italic;
+    color: #ccc;
+  }
+
+  /* SWOT - Be Amazing Style */
+  .swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .swot-box {
+    background: #1a1a1a;
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    border-top: 3px solid #F0A800;
+  }
+  .swot-box h4 {
+    color: #F0A800;
+    font-size: 1.2em;
+    margin: 0 0 14px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .swot-box ul { margin: 0; padding-left: 18px; }
+  .swot-box li { margin: 8px 0; color: #ddd; font-size: 0.95em; }
+  .swot-box li::marker { color: #F0A800; }
+
   /* Services */
-  .service-card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 18px; margin: 10px 0; }
-  .service-card h4 { color: #fbbf24; margin: 0 0 8px 0; }
-  .service-tag { display: inline-block; background: #334155; color: #e2e8f0; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; margin: 2px 4px 2px 0; }
-  .brand-pill { display: inline-block; background: #7c2d12; color: #fed7aa; padding: 6px 14px; border-radius: 999px; margin: 4px; font-weight: 600; }
-  .channel-card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 16px; margin: 8px 0; }
-  .channel-card h4 { margin: 0 0 8px 0; color: #fbbf24; }
-  .idea-card { background: linear-gradient(135deg, #1e293b, #312e81); border: 1px solid #6366f1; border-radius: 10px; padding: 16px; margin: 12px 0; }
-  .idea-card h4 { color: #a5b4fc; margin: 0 0 6px 0; }
-  .priority-high { border-left: 4px solid #f87171; }
-  .priority-med { border-left: 4px solid #fbbf24; }
-  .priority-low { border-left: 4px solid #34d399; }
+  .service-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-left: 3px solid #F0A800;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 12px 0;
+  }
+  .service-card h4 { color: #F0A800; margin: 0 0 10px 0; }
+  .service-tag {
+    display: inline-block;
+    background: #2a2a2a;
+    color: #ddd;
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-size: 0.85em;
+    margin: 3px 4px 3px 0;
+    border: 1px solid #3a3a3a;
+  }
+
+  /* Brand pills */
+  .brand-pill {
+    display: inline-block;
+    background: #F0A800;
+    color: #0a0a0a;
+    padding: 8px 16px;
+    border-radius: 999px;
+    margin: 4px;
+    font-weight: 700;
+    font-size: 0.9em;
+  }
+
+  /* Channels */
+  .channel-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 18px;
+    margin: 10px 0;
+  }
+  .channel-card h4 { color: #F0A800; margin: 0 0 10px 0; }
+
+  /* Ideas */
+  .idea-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-left: 3px solid #F0A800;
+    border-radius: 8px;
+    padding: 18px;
+    margin: 12px 0;
+  }
+  .idea-card h4 { color: #F0A800; margin: 0 0 8px 0; }
+  .priority-high { border-left-color: #F0A800; border-left-width: 5px; }
+  .priority-med { border-left-color: #F0A818; }
+  .priority-low { border-left-color: #555; }
+
+  /* DNA card */
+  .dna {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 14px 0;
+    border-left: 3px solid #F0A800;
+  }
+  .dna h4 { color: #F0A800; margin: 0 0 10px 0; }
+
+  /* Achievements */
+  .achv {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-left: 3px solid #F0A800;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 10px 0;
+  }
+  .achv h4 { color: #F0A800; margin: 0 0 8px 0; }
+
+  /* Footer */
+  .footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid #2a2a2a;
+    color: #666;
+    text-align: center;
+    font-size: 0.9em;
+  }
+  .footer a { color: #F0A800; text-decoration: none; }
+
+  /* Logo-like accent */
+  .accent-line {
+    height: 2px;
+    background: linear-gradient(90deg, #F0A800 0%, #F0A818 50%, transparent 100%);
+    margin: 30px 0;
+  }
 </style>
 </head>
 <body>
 
-<h1>🎬 Be Amazing Edutainment — Strategic Dashboard v4</h1>
-<p style="color:#94a3b8; font-size:1.1em; margin-top:0">Brand DNA • Programs • Events/Services • SWOT • Strategic Insights</p>
+<h1>Be Amazing Edutainment</h1>
+<p style="color:#888; font-size:1.1em; margin-top:0">Strategic Dashboard • Brand DNA • Programs • SWOT Analysis</p>
 
 <div class="quote">
   "เราผู้ผลิต สื่อสร้างสรรค์เพื่อการเรียนรู้ในด้านต่าง ๆ ในรูปแบบที่หลากหลาย อาทิ คลิป VDO, รายการโทรทัศน์, ละคร, Workshop, สัมมนา คาราวาน, สื่อสิ่งพิมพ์, สื่อออนไลน์ และกิจกรรมส่งเสริมกระบวนการเรียนรู้สำหรับเด็ก ครอบครัว รวมไปถึงโรงเรียนและคุณครูในทุกรูปแบบ"<br>
@@ -78,75 +259,70 @@
 </div>
 
 <!-- ============================== SWOT ============================== -->
-<h2>💎 SWOT Analysis (จุดแข็ง/จุดอ่อน/โอกาส/อุปสรรค)</h2>
+<h2>💎 SWOT Analysis</h2>
 
 <div class="swot-grid">
-  <div class="swot-box strength">
-    <h4>💪 STRENGTHS (จุดแข็ง)</h4>
+  <div class="swot-box">
+    <h4>💪 STRENGTHS • จุดแข็ง</h4>
     <ul>
       <li><b>Library ใหญ่ที่สุดในไทย:</b> 1,827 ตอน ใน 16 programs — ไม่มีคู่แข่งเทียบ</li>
       <li><b>278M+ views บน YouTube</b> — รวม 39 คลิป viral 1M+ (Top 1: จระเข้ 47.9M)</li>
-      <li><b>รางวัลนานาชาติ 29+:</b> Japan Prize, ABU Prize, Prix Jeunesse, IPST, ทีวีทองคำ, ทีวีสีขาว</li>
+      <li><b>รางวัลนานาชาติ 29+:</b> Japan Prize, ABU Prize, Prix Jeunesse, IPST, ทีวีทองคำ</li>
       <li><b>20+ ปีประสบการณ์</b> + ทีมผู้บริหาร 4 คน (Sirichotchumnarn/Termsirikamol)</li>
-      <li><b>Co-production 3 ประเทศ:</b> 🇰🇷 EBS Korea (Beast Of Asia, Baby On The Way), 🇯🇵 NHK Japan (Mimicries), 🇩🇪 Goethe-Institut (I Got It, The Teddy's Life)</li>
-      <li><b>Multi-platform distribution:</b> TV (ALTV4, ThaiPBS, ThaiPBS Kids) + YouTube (2 ช่อง) + Facebook + TikTok + LINE + Twitter + Events</li>
-      <li><b>Brand voice ที่ชัดเจน:</b> "สนุก + สาระ + ตั้งคำถาม + ฮีโร่ของเด็กธรรมดา" — ทำซ้ำได้, scale ได้</li>
-      <li><b>Multi-format mastery:</b> TV (20min) + Half-ep (11min) + Short (60s) + Medium (5min) + Clip (2min)</li>
-      <li><b>B2B / B2G trust:</b> ได้รับความไว้วางใจจากหน่วยงานระดับประเทศทั้งภาครัฐและเอกชน</li>
+      <li><b>Co-production 3 ประเทศ:</b> 🇰🇷 EBS Korea, 🇯🇵 NHK Japan, 🇩🇪 Goethe-Institut</li>
+      <li><b>Multi-platform distribution:</b> TV + YouTube (2 ช่อง) + FB + TikTok + LINE + Events</li>
+      <li><b>Brand voice ที่ชัดเจน:</b> "สนุก + สาระ + ตั้งคำถาม + ฮีโร่ของเด็กธรรมดา"</li>
       <li><b>Flagship "บ้านนักวิทยาศาสตร์น้อย":</b> 771 ตอน 151.7M views (52% ของ views ทั้งหมด)</li>
     </ul>
   </div>
 
-  <div class="swot-box weakness">
-    <h4>⚠️ WEAKNESSES (จุดอ่อน)</h4>
+  <div class="swot-box">
+    <h4>⚠️ WEAKNESSES • จุดอ่อน</h4>
     <ul>
       <li><b>Pipeline ลดลงชัดเจน:</b> Peak 271 ตอน (2022) → 51 ตอน (2026) ลด 80%</li>
-      <li><b>Newer programs underperform:</b> Money Mindset, ภารกิจพิชิตฝัน, Mad Math — 6K-19K views (แทบไม่ติด)</li>
+      <li><b>Newer programs underperform:</b> Money Mindset, ภารกิจพิชิตฝัน, Mad Math — ยังไม่ติด</li>
       <li><b>ขาด Teen content:</b> มีแค่ TIC TAC TECH 33 ep (ยังไม่ติด) — วัย 13-18 ขาดแคลน</li>
       <li><b>ไม่มี Interactive/Live:</b> ไม่มี Live streaming, ไม่มี audience vote, ไม่มี App</li>
-      <li><b>ไม่มี Podcast / Audio-first:</b> ขาดช่องทาง audio (ขณะที่ Podcast มาแรง)</li>
-      <li><b>ช่อง YouTube ใหม่ (Be STEAM) ยังไม่แข็งแรง:</b> 331K subs vs ThaiPBS Kids 965K subs</li>
-      <li><b>ไม่มี AR/VR/3D:</b> ขาด immersive experience ที่ Gen Alpha คาดหวัง</li>
-      <li><b>สัดส่วนรายการ:</b> 800+ ตอนเป็นเรื่อง "สัตว์" — อาจถูกมองว่าซ้ำ</li>
+      <li><b>ไม่มี Podcast / Audio-first:</b> ขาดช่องทาง audio</li>
+      <li><b>Be STEAM ยังไม่แข็งแรง:</b> 331K subs vs ThaiPBS Kids 965K</li>
+      <li><b>ไม่มี AR/VR/3D:</b> ขาด immersive experience</li>
       <li><b>Brand awareness:</b> คนไทยทั่วไปอาจไม่รู้จัก Be Amazing แต่รู้จักรายการ</li>
-      <li><b>เว็บไซต์หลักเก่า:</b> beamazing.co.th ไม่ค่อย update, nav bar มีแต่ menu ว่าง</li>
+      <li><b>เว็บไซต์หลักเก่า:</b> beamazing.co.th ไม่ค่อย update</li>
     </ul>
   </div>
 
-  <div class="swot-box opportunity">
-    <h4>🌟 OPPORTUNITIES (โอกาส)</h4>
+  <div class="swot-box">
+    <h4>🌟 OPPORTUNITIES • โอกาส</h4>
     <ul>
-      <li><b>AI Era 2026+:</b> ความต้องการ AI Literacy สำหรับเด็ก เป็น mega-trend — ยังไม่มีเจ้าของตลาด</li>
+      <li><b>AI Era 2026+:</b> ความต้องการ AI Literacy สำหรับเด็ก เป็น mega-trend</li>
       <li><b>Mental Health เด็ก:</b> วัยนี้ stress/anxiety/ADHD เพิ่ม — ช่องว่างใหญ่</li>
-      <li><b>Gen Alpha:</b> ใช้ short-form (TikTok/Shorts/Reels) เป็นช่องทางหลัก — โอกาส viral แบบ H2OH</li>
+      <li><b>Gen Alpha:</b> ใช้ short-form (TikTok/Shorts) เป็นช่องทางหลัก</li>
       <li><b>EdTech boom:</b> Post-COVID, พ่อแม่ยอมจ่ายเงินเพื่อการศึกษาเด็ก</li>
-      <li><b>Money/EQ Skills:</b> ขาดแคลน content ดีๆ สำหรับเด็กไทย (Money Mindset มีแล้ว แต่ยังไม่ติด)</li>
-      <li><b>Co-pro ต่างประเทศ:</b> ประสบการณ์ co-pro กับ KR/JP/DE — โอกาสต่อยอดกับอาเซียน (อินโด, ฟิลิปปินส์, สิงคโปร์)</li>
-      <li><b>Streaming Wars:</b> Netflix/Disney+ ต้องการ content เด็ก — โอกาส licensing</li>
-      <li><b>Schools & Government:</b> สพฐ. + สช. ต้องการสื่อ Edutainment คุณภาพสูงสำหรับ รร. 30,000+ แห่ง</li>
-      <li><b>Merchandise/Licensing:</b> ตัวละครจาก "บ้านนักวิทย์น้อย" สร้าง toy/ของเล่น/เสื้อผ้าได้</li>
-      <li><b>Teacher Platform:</b> ระบบ subscription สำหรับครู ดู worksheet/แผนการสอน/ใบงาน</li>
+      <li><b>Money/EQ Skills:</b> ขาดแคลน content ดีๆ สำหรับเด็กไทย</li>
+      <li><b>Co-pro ต่างประเทศ:</b> โอกาสต่อยอดกับอาเซียน</li>
+      <li><b>Streaming Wars:</b> Netflix/Disney+ ต้องการ content เด็ก</li>
+      <li><b>Schools & Government:</b> สพฐ. + สช. ต้องการสื่อ Edutainment คุณภาพสูง</li>
+      <li><b>Merchandise/Licensing:</b> ตัวละครจาก "บ้านนักวิทย์น้อย" สร้าง toy/ของเล่นได้</li>
     </ul>
   </div>
 
-  <div class="swot-box threat">
-    <h4>🚨 THREATS (อุปสรรค)</h4>
+  <div class="swot-box">
+    <h4>🚨 THREATS • อุปสรรค</h4>
     <ul>
-      <li><b>YouTube algorithm เปลี่ยน:</b> Shorts อาจลด reach, เด็ก Gen Alpha ย้ายไป TikTok/Reels เต็มตัว</li>
-      <li><b>TV ratings ลดลง:</b> เด็กไทยดูทีวีน้อยลง พึ่ง TV airtime = ความเสี่ยง</li>
-      <li><b>คู่แข่งใหม่:</b> CoComelon, Ryan's World, Cocomelon-style startups เข้าไทย</li>
-      <li><b>Budget cuts ภาครัฐ:</b> งบประมาณสื่อสร้างสรรค์ลดลง → รายได้จากภาครัฐอาจหายไป</li>
-      <li><b>AI-generated content:</b> เด็ก/พ่อแม่อาจคาดหวัง content แบบ AI-personalized → traditional TV ดูช้า</li>
-      <li><b>Copyright/Piracy:</b> คลิป viral ของ BA ถูก repost บน TikTok/Facebook ทั่วไป โดยไม่ได้ credit</li>
-      <li><b>ความเสี่ยง Brand safety:</b> ข่าว fake/deepfake ทำให้ความเชื่อถือในสื่อเด็กลดลง</li>
-      <li><b>Talent shortage:</b> หาพี่เพชร/พี่โต/พี่วิว/นักวิทย์ ที่มี charisma + ความรู้ ยากขึ้น</li>
-      <li><b>Production cost:</b> ค่าถ่ายทำ + ค่า animation สูงขึ้น ขณะที่รายได้ TV ad ไม่เติบโต</li>
+      <li><b>YouTube algorithm เปลี่ยน:</b> Shorts อาจลด reach, เด็กย้ายไป TikTok/Reels</li>
+      <li><b>TV ratings ลดลง:</b> เด็กไทยดูทีวีน้อยลง</li>
+      <li><b>คู่แข่งใหม่:</b> CoComelon, Ryan's World, Cocomelon-style startups</li>
+      <li><b>Budget cuts ภาครัฐ:</b> งบประมาณสื่อสร้างสรรค์ลดลง</li>
+      <li><b>AI-generated content:</b> เด็ก/พ่อแม่อาจคาดหวัง AI-personalized</li>
+      <li><b>Copyright/Piracy:</b> คลิป viral ถูก repost โดยไม่ได้ credit</li>
+      <li><b>Talent shortage:</b> หาพี่เพชร/พี่โต/พี่วิว ที่มี charisma ยากขึ้น</li>
+      <li><b>Production cost:</b> ค่าถ่ายทำ + animation สูงขึ้น</li>
     </ul>
   </div>
 </div>
 
 <!-- ============================== BRAND DNA ============================== -->
-<h2>🎯 Brand DNA / อัตลักษณ์</h2>
+<h2>🎯 Brand DNA</h2>
 
 <div class="dna">
   <h4>🧬 Brand Pillars</h4>
@@ -185,16 +361,16 @@
     <li><b>Warinnet Termsirikamol</b> — ผู้บริหาร</li>
     <li><b>Pongpichate Sirichotchumnarn</b> — ผู้บริหาร</li>
   </ul>
-  <p style="margin-top:10px"><b>📍 ที่ตั้ง:</b> 737/12 ซอยลาดพร้าว 48 แยก 12 แขวงสามเสนนอก เขตห้วยขวาง กทม. 10310 | ☎ 090-569-9545 | ✉ BeAmazingTeam@gmail.com</p>
+  <p style="margin-top:12px"><b>📍 ที่ตั้ง:</b> 737/12 ซอยลาดพร้าว 48 แยก 12 แขวงสามเสนนอก เขตห้วยขวาง กทม. 10310 | ☎ 090-569-9545 | ✉ BeAmazingTeam@gmail.com</p>
 </div>
 
 <!-- ============================== PROGRAMS ============================== -->
 <h2>📺 16 Programs (รายการที่ผลิตทั้งหมด)</h2>
 <table>
 <tr><th>#</th><th>รายการ</th><th class="n"># ตอน</th><th class="n">Total Views</th><th class="n">Max Views</th><th>Platform</th><th>Format</th><th>Target</th></tr>
-<tr style="background:#7c2d12"><td>⭐</td><td><b>บ้านนักวิทยาศาสตร์น้อย</b></td><td class="n"><b>771</b></td><td class="n"><b>151.7M</b></td><td class="n viral">47.9M</td><td>ALTV4 + ThaiPBS Kids + NSMThailand</td><td>Animation+ทดลอง</td><td>อนุบาล 0-6 ปี</td></tr>
-<tr style="background:#7c2d12"><td>⭐</td><td><b>Kid Rangers</b></td><td class="n"><b>416</b></td><td class="n"><b>44.7M</b></td><td class="n viral">3.8M</td><td>ALTV4 + ThaiPBS Kids</td><td>ภารกิจ+ลงพื้นที่</td><td>ประถม 7-12 ปี</td></tr>
-<tr style="background:#7c2d12"><td>⭐</td><td><b>คิดวิทย์</b></td><td class="n"><b>217</b></td><td class="n"><b>72.7M</b></td><td class="n viral">31.9M</td><td>ThaiPBS Kids</td><td>สืบสวน</td><td>ประถม 7-12 ปี</td></tr>
+<tr class="star"><td>★</td><td><b>บ้านนักวิทยาศาสตร์น้อย</b></td><td class="n"><b>771</b></td><td class="n"><b>151.7M</b></td><td class="n viral">47.9M</td><td>ALTV4 + ThaiPBS Kids + NSMThailand</td><td>Animation+ทดลอง</td><td>อนุบาล 0-6 ปี</td></tr>
+<tr class="star"><td>★</td><td><b>Kid Rangers</b></td><td class="n"><b>416</b></td><td class="n"><b>44.7M</b></td><td class="n viral">3.8M</td><td>ALTV4 + ThaiPBS Kids</td><td>ภารกิจ+ลงพื้นที่</td><td>ประถม 7-12 ปี</td></tr>
+<tr class="star"><td>★</td><td><b>คิดวิทย์</b></td><td class="n"><b>217</b></td><td class="n"><b>72.7M</b></td><td class="n viral">31.9M</td><td>ThaiPBS Kids</td><td>สืบสวน</td><td>ประถม 7-12 ปี</td></tr>
 <tr><td>4</td><td>สังคม สนุกคิด</td><td class="n">152</td><td class="n">1.6M</td><td class="n">127K</td><td>ThaiPBS Kids</td><td>เล่าเรื่อง+การ์ตูน</td><td>ประถม</td></tr>
 <tr><td>5</td><td>คิดสิ...ต้องรอด</td><td class="n">43</td><td class="n">146K</td><td class="n">24K</td><td>ThaiPBS Kids</td><td>Survival+Safety</td><td>ประถม</td></tr>
 <tr><td>6</td><td>คิดส์เรียนรู้ (Kid Rangers Clip)</td><td class="n">39</td><td class="n">745K</td><td class="n">301K</td><td>ThaiPBS Kids</td><td>Short Clip 2-min</td><td>ประถม</td></tr>
@@ -208,41 +384,36 @@
 <tr><td>14</td><td>Mad Math คณิตติดมันส์</td><td class="n">13</td><td class="n">16K</td><td class="n">2K</td><td>ThaiPBS Kids</td><td>Math+ฟาร์ม</td><td>ประถม</td></tr>
 <tr><td>15</td><td>คิดวิทย์ - ช่วงประดิษฐ์ และทดลอง</td><td class="n">7</td><td class="n">16K</td><td class="n">10K</td><td>ThaiPBS Kids</td><td>Short Clip</td><td>ประถม</td></tr>
 <tr><td>16</td><td>เกร็ดความรู้จาก Kid Rangers</td><td class="n">1</td><td class="n">437</td><td class="n">437</td><td>ThaiPBS Kids</td><td>Clip</td><td>ประถม</td></tr>
-<tr style="background:#1e293b; border-top:2px solid #fbbf24">
-<td colspan="2"><b>TOTAL 16 Programs</b></td><td class="n"><b>1,827</b></td><td class="n"><b>278.4M</b></td><td class="n"><b>47.9M</b></td><td colspan="3"></td>
-</tr>
+<tr class="star"><td colspan="2"><b>TOTAL 16 Programs</b></td><td class="n"><b>1,827</b></td><td class="n"><b>278.4M</b></td><td class="n"><b>47.9M</b></td><td colspan="3"></td></tr>
 </table>
 
 <!-- ============================== EVENTS & SERVICES ============================== -->
 <h2>🎪 Events & Services (ธุรกิจเสริม)</h2>
-<p style="color:#94a3b8">นอกจากรายการทีวีและ YouTube, Be Amazing ยังมีบริการ 4 ด้านที่สร้างรายได้และ engagement ในโลกจริง</p>
+<p style="color:#888">นอกจากรายการทีวีและ YouTube, Be Amazing ยังมีบริการ 5 ด้านที่สร้างรายได้และ engagement ในโลกจริง</p>
 
 <div class="service-card">
   <h4>🎪 Events (กิจกรรม/ค่าย/อีเว้น)</h4>
-  <p style="margin-top:0"><b>ประเภท:</b> งาน Event เชิง Edutainment แบบ on-ground</p>
   <div>
-    <span class="service-tag">👨‍👩‍👧‍👦 Kid and Family Camp — ค่ายครอบครัว</span>
-    <span class="service-tag">👨‍🏫 Teacher Workshop — อบรมครู</span>
-    <span class="service-tag">🎉 Edutainment Event — อีเว้นองค์กร</span>
-    <span class="service-tag">🏫 School Tour — ทัวร์โรงเรียน</span>
+    <span class="service-tag">👨‍👩‍👧‍👦 Kid and Family Camp</span>
+    <span class="service-tag">👨‍🏫 Teacher Workshop</span>
+    <span class="service-tag">🎉 Edutainment Event</span>
+    <span class="service-tag">🏫 School Tour</span>
   </div>
   <p style="margin-top:12px"><b>💡 โอกาส:</b> ต่อยอดจาก Be STEAM x ค่าย = summer camp / winter camp ขายตั๋ว, CSR activity ให้แบรนด์, Franchise ค่ายของ BA</p>
 </div>
 
 <div class="service-card">
   <h4>📚 Medium (สื่อสิ่งพิมพ์)</h4>
-  <p style="margin-top:0"><b>ประเภท:</b> Physical media ที่ขายในร้านหนังสือ/รร.</p>
   <div>
-    <span class="service-tag">🃏 Card Game — เกมไพ่การศึกษา</span>
-    <span class="service-tag">📖 Book — หนังสือการ์ตูน/ความรู้</span>
-    <span class="service-tag">📦 Box Set — กล่องสะสมของเล่น</span>
+    <span class="service-tag">🃏 Card Game</span>
+    <span class="service-tag">📖 Book</span>
+    <span class="service-tag">📦 Box Set</span>
   </div>
   <p style="margin-top:12px"><b>💡 โอกาส:</b> Card Game "คิดวิทย์" / หนังสือ "บ้านนักวิทย์น้อย" / Box Set "Proud เว่อร์" ในช่อง 7-Eleven, B2S, รร.</p>
 </div>
 
 <div class="service-card">
   <h4>📱 Media (แพลตฟอร์มดิจิทัล)</h4>
-  <p style="margin-top:0"><b>ประเภท:</b> บริการสื่อดิจิทัล</p>
   <div>
     <span class="service-tag">📺 TV Program</span>
     <span class="service-tag">🎬 Clip Content Online</span>
@@ -254,19 +425,17 @@
 
 <div class="service-card">
   <h4>🌐 International (Co-production)</h4>
-  <p style="margin-top:0"><b>5 เรื่องร่วมผลิตกับ 3 ประเทศ</b></p>
   <div>
     <span class="service-tag">🇰🇷 EBS Korea — Beast Of Asia, Baby On The Way</span>
     <span class="service-tag">🇯🇵 NHK Japan — Mimicries</span>
     <span class="service-tag">🇩🇪 Goethe-Institut — I Got It, The Teddy's Life</span>
   </div>
-  <p style="margin-top:12px"><b>💡 โอกาส:</b> Co-pro กับอาเซียน (Indonesia, Philippines, Vietnam), Netflix Asia, Disney+ Hotstar</p>
+  <p style="margin-top:12px"><b>💡 โอกาส:</b> Co-pro กับอาเซียน, Netflix Asia, Disney+ Hotstar</p>
 </div>
 
 <div class="service-card">
   <h4>👥 Team Building & Workshop</h4>
-  <p style="margin-top:0"><b>ประเภท:</b> บริการจัดกิจกรรมสำหรับองค์กร/บริษัท</p>
-  <p>ออกแบบกิจกรรม Team Building แนว Edutainment สำหรับองค์กรที่ต้องการ "Workshop สนุก + สาระ + สร้างสรรค์" — ต่อยอดจากความเชี่ยวชาญ Edutainment ของ BA</p>
+  <p>ออกแบบกิจกรรม Team Building แนว Edutainment สำหรับองค์กร — Workshop สนุก + สาระ + สร้างสรรค์</p>
   <p style="margin-top:12px"><b>💡 โอกาส:</b> Package "Escape Room แนววิทยาศาสตร์", Workshop "Storytelling for Business", "Innovation Lab" สำหรับ HR/Management</p>
 </div>
 
@@ -334,22 +503,22 @@
 <!-- ============================== GAP ============================== -->
 <h2>🎯 ช่องว่างที่ยังไม่ได้ทำ (Open Opportunities)</h2>
 
-<div class="dna" style="background:#14532d; border-left:4px solid #34d399;">
-  <h4>✅ Topic ที่ทำแล้ว (อย่า propose ซ้ำ)</h4>
+<div class="dna" style="background:#1a1a1a; border-left: 3px solid #34d399;">
+  <h4 style="color:#34d399">✅ Topic ที่ทำแล้ว (อย่า propose ซ้ำ)</h4>
   <p>Money Mindset • คิดสิ...ต้องรอด (Survival) • Cyber Ranger (Cyber Safety) • TIC TAC TECH (Tech Literacy) • Kiddy Code (Computational) • ภารกิจพิชิตฝัน (Career) • Mad Math • สัตว์/แมลง/ธรรมชาติ (800+ ตอน)</p>
 </div>
 
-<div class="dna" style="background:#713f12; border-left:4px solid #fbbf24;">
-  <h4>🆕 Topic ที่ยังไม่มี = โอกาสใหม่</h4>
+<div class="dna" style="background:#1a1a1a; border-left: 3px solid #F0A818;">
+  <h4 style="color:#F0A818">🆕 Topic ที่ยังไม่มี = โอกาสใหม่</h4>
   <p>🧠 <b>Mental Health เด็ก</b> | 🤖 <b>AI Literacy</b> (ใช้ AI สร้างสรรค์) | 🌱 <b>Climate Action/Sustainability</b> | 🎮 <b>Esports/Game Design</b> | 💕 <b>EQ/Relationship</b> | 🏃 <b>Sports/Physical</b> | 🎨 <b>Art/Music/Creative</b> | 👫 <b>Teen 13-18 เชิงลึก</b> | 🧬 <b>Health/Nutrition/Puberty</b> | 🧓 <b>Intergenerational</b> | 🌏 <b>ASEAN Cultures</b> | 🌗 <b>Live/Interactive</b> | 📱 <b>AR/VR/3D</b> | 🎙️ <b>Podcast</b></p>
 </div>
 
 <!-- ============================== STRATEGIC IDEAS ============================== -->
-<h2>💡 แนวทาง/ไอเดียเชิงกลยุทธ์ (จากข้อมูลจริง)</h2>
+<h2>💡 Strategic Ideas (จากข้อมูลจริง)</h2>
 
 <div class="idea-card priority-high">
   <h4>🔴 Priority #1: เร่ง Pipeline กลับเข้า 200+ ตอน/ปี</h4>
-  <p><b>ปัญหา:</b> Pipeline ลด 80% (271 → 51 ตอน) — ถ้า trend เป็นเช่นนี้ต่อ อาจสูญเสีย momentum</p>
+  <p><b>ปัญหา:</b> Pipeline ลด 80% (271 → 51 ตอน)</p>
   <p><b>แนวทาง:</b> ใช้ AI/automation ในการตัดต่อ + repurposing content เก่าเป็น Shorts/Clip → ลดเวลา post-production 30%</p>
   <p><b>Quick win:</b> เอา 800+ ตอนเก่าของ "บ้านนักวิทย์น้อย" มาตัดเป็น Shorts (60s) → 1,400+ Shorts ใหม่</p>
 </div>
@@ -357,36 +526,34 @@
 <div class="idea-card priority-high">
   <h4>🔴 Priority #2: เปิด "AI Lab" รายการใหม่</h4>
   <p><b>โอกาส:</b> AI Literacy = mega-trend 2026+ — ไม่มีเจ้าของตลาดในไทย</p>
-  <p><b>Format:</b> เด็ก 10-15 ปี เรียน AI ผ่านเกม + โปรเจกต์จริง (เขียน prompt, ทำ chatbot, สร้างภาพ)</p>
+  <p><b>Format:</b> เด็ก 10-15 ปี เรียน AI ผ่านเกม + โปรเจกต์จริง</p>
   <p><b>Target:</b> ตลาด 50 ล้านบาท+ (EdTech เติบโต 25% ต่อปี)</p>
-  <p><b>Brand fit:</b> ใช้จุดแข็ง "สนุก + สาระ" ของ BA + เพิ่ม "ทักษะแห่งอนาคต"</p>
 </div>
 
 <div class="idea-card priority-high">
   <h4>🔴 Priority #3: License "บ้านนักวิทย์น้อย" ไปอาเซียน</h4>
-  <p><b>โอกาส:</b> มี 5 co-pro อยู่แล้วกับ KR/JP/DE — ขยายไปอาเซียน (อินโด 270M คน, ฟิลิปปินส์ 110M, เวียดนาม 100M)</p>
-  <p><b>Asset:</b> 771 ตอน 151.7M views เป็นหลักฐานว่า content ดี — ขาย format license</p>
-  <p><b>Revenue model:</b> License fee + Royalty 5-10% ต่อตอน (อิง Netflix kids content ราคา)</p>
+  <p><b>โอกาส:</b> มี 5 co-pro อยู่แล้วกับ KR/JP/DE — ขยายไปอาเซียน</p>
+  <p><b>Asset:</b> 771 ตอน 151.7M views เป็นหลักฐานว่า content ดี</p>
+  <p><b>Revenue model:</b> License fee + Royalty 5-10% ต่อตอน</p>
 </div>
 
 <div class="idea-card priority-med">
   <h4>🟡 Priority #4: เปิด Interactive Live + AR App</h4>
-  <p><b>ปัญหา:</b> ไม่มี Interactive/Live/AR/VR — เด็ก Gen Alpha คาดหวัง</p>
-  <p><b>แนวทาง:</b> Live streaming ทดลองวิทยาศาสตร์ + ให้เด็กโหวตผ่านแอป → ตอน popular ต่อยอดเป็น series</p>
-  <p><b>Quick win:</b> Live รายสัปดาห์ "Be STEAM Lab" 1 ชม. บน YouTube + TikTok → ดูว่า engagement เป็นยังไง</p>
+  <p><b>ปัญหา:</b> ไม่มี Interactive/Live/AR/VR</p>
+  <p><b>แนวทาง:</b> Live streaming ทดลองวิทยาศาสตร์ + ให้เด็กโหวตผ่านแอป</p>
+  <p><b>Quick win:</b> Live รายสัปดาห์ "Be STEAM Lab" 1 ชม.</p>
 </div>
 
 <div class="idea-card priority-med">
   <h4>🟡 Priority #5: ขยาย Teen Segment (13-18 ปี)</h4>
   <p><b>Gap:</b> มีแค่ TIC TAC TECH (33 ep, 44K views) — Teen ตลาดใหญ่ แต่ไม่มี content</p>
-  <p><b>แนวทาง:</b> รายการใหม่ "Real Teen" — เด็กวัยรุ่นแก้ปัญหาจริง + เรียนรู้ financial/eQ/career แบบ peer-to-peer</p>
-  <p><b>Format:</b> Short-form 3-7 min + TikTok-style</p>
+  <p><b>แนวทาง:</b> รายการใหม่ "Real Teen" — เด็กวัยรุ่นแก้ปัญหาจริง + เรียนรู้ financial/eQ/career</p>
 </div>
 
 <div class="idea-card priority-med">
-  <h4>🟡 Priority #6: ขยาย Events เป็น Franchise</h6>
+  <h4>🟡 Priority #6: ขยาย Events เป็น Franchise</h4>
   <p><b>Asset:</b> มี Kid Camp / Family Camp / Teacher Workshop อยู่แล้ว</p>
-  <p><b>แนวทาง:</b> Franchise "Be Amazing Camp" — ขาย license ให้ รร. เอกชน / ศูนย์การค้า จัดค่ายในแบรนด์ BA</p>
+  <p><b>แนวทาง:</b> Franchise "Be Amazing Camp" — ขาย license ให้ รร. เอกชน / ศูนย์การค้า</p>
   <p><b>Revenue:</b> License 200K-500K / camp / brand</p>
 </div>
 
@@ -394,23 +561,24 @@
   <h4>🟢 Priority #7: เปิด "Be Amazing Podcast"</h4>
   <p><b>Gap:</b> ไม่มี audio-first content</p>
   <p><b>แนวทาง:</b> Podcast เด็ก — เล่าเรื่องวิทยาศาสตร์ + สัมภาษณ์นักวิทยาศาสตร์ไทย (15-30 min)</p>
-  <p><b>Platform:</b> Spotify, Apple Podcast, YouTube Music</p>
 </div>
 
 <div class="idea-card priority-low">
-  <h4>🟢 Priority #8: Merchandise / Character Licensing</h8>
+  <h4>🟢 Priority #8: Merchandise / Character Licensing</h4>
   <p><b>Asset:</b> ตัวละครจาก "บ้านนักวิทย์น้อย" น่ารัก + ติดตลาด</p>
   <p><b>แนวทาง:</b> License ให้ผู้ผลิตของเล่น/เสื้อผ้า/กระเป๋า/สมุด → passive income</p>
-  <p><b>Case study:</b> CoComelon ทำเงิน 80% จาก merchandise ไม่ใช่ ads</p>
+  <p><b>Case study:</b> CoComelon ทำเงิน 80% จาก merchandise</p>
 </div>
 
-<hr style="margin: 40px 0; border-color: #334155;">
-<p style="color:#94a3b8; text-align:center">
+<div class="accent-line"></div>
+
+<div class="footer">
   📁 Source: <b>beamazing.co.th</b> + YouTube (ThaiPBS Kids, Be STEAM, NSMThailand, ALTV4) | 
-  📅 Dashboard v4 updated: 2026-07-25 | 
+  📅 Dashboard v5 updated: 2026-07-25 | 
   📊 Dataset: <b>1,827 วิดีโอ, 278.4M views, 16 programs, 5 co-pro, 29+ awards</b><br>
-  🌐 <b>Live URL:</b> https://linwornfong.github.io/ba-dashboard/
-</p>
+  🎨 <b>CI Colors:</b> #F0A800 (Gold) + #0a0a0a (Black) | 
+  🌐 <b>Live URL:</b> <a href="https://linwornfong.github.io/ba-dashboard/">https://linwornfong.github.io/ba-dashboard/</a>
+</div>
 
 </body>
 </html>
