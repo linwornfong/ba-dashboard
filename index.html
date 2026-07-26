@@ -2,17 +2,10 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Be Amazing - Program DNA Dashboard v6</title>
+<title>Be Amazing - Program DNA Dashboard v8 (Be STEAM + ThaiPBS Kids)</title>
 <style>
   * { box-sizing: border-box; }
-  body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: #0a0a0a;
-    color: #F5F5F5;
-    margin: 0;
-    padding: 24px;
-    line-height: 1.6;
-  }
+  body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0a0a0a; color: #F5F5F5; margin: 0; padding: 24px; line-height: 1.6; }
   h1 { color: #F0A800; font-size: 2.2em; margin: 0 0 6px 0; font-weight: 700; }
   h1::before { content: "●"; color: #F0A800; margin-right: 12px; font-size: 0.7em; vertical-align: middle; }
   h2 { color: #F0A800; border-bottom: 2px solid #F0A800; padding-bottom: 10px; margin-top: 48px; font-size: 1.5em; font-weight: 600; }
@@ -48,14 +41,19 @@
   .priority-high { border-left-color: #F0A800; border-left-width: 5px; }
   .priority-med { border-left-color: #F0A818; }
   .priority-low { border-left-color: #555; }
+  .dna { background: #1a1a1a; padding: 20px; border-radius: 8px; margin: 14px 0; border-left: 4px solid #F0A800; }
+  .dna h4 { color: #F0A800; margin: 0 0 10px 0; }
   .dna-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px; padding: 22px; margin: 16px 0; border-left: 4px solid #F0A800; }
-  .dna-card h3 { color: #F0A800; font-size: 1.4em; margin: 0 0 4px 0; }
+  .dna-card.besteam { border-left-color: #F0A818; }
+  .dna-card h3 { color: #F0A800; font-size: 1.3em; margin: 0 0 4px 0; }
+  .dna-card.besteam h3 { color: #F0A818; }
   .dna-card .meta { color: #888; font-size: 0.9em; margin-bottom: 14px; }
-  .dna-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 14px 0; }
+  .dna-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 12px 0; }
   .dna-stat { background: #0a0a0a; padding: 10px 14px; border-radius: 6px; }
-  .dna-stat .l { color: #888; font-size: 0.8em; }
-  .dna-stat .v { color: #F0A800; font-weight: bold; font-size: 1.1em; }
-  .dna-detail { display: grid; grid-template-columns: 130px 1fr; gap: 8px 14px; margin: 12px 0; font-size: 0.95em; }
+  .dna-stat .l { color: #888; font-size: 0.78em; }
+  .dna-stat .v { color: #F0A800; font-weight: bold; font-size: 1.05em; }
+  .besteam .dna-stat .v { color: #F0A818; }
+  .dna-detail { display: grid; grid-template-columns: 130px 1fr; gap: 6px 14px; margin: 10px 0; font-size: 0.93em; }
   .dna-detail dt { color: #F0A818; font-weight: 600; }
   .dna-detail dd { margin: 0; color: #ddd; }
   .tag-chip { display: inline-block; background: #2a2a2a; color: #F0A818; padding: 3px 10px; border-radius: 12px; font-size: 0.8em; margin: 2px; }
@@ -64,12 +62,13 @@
   .footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #2a2a2a; color: #666; text-align: center; font-size: 0.9em; }
   .footer a { color: #F0A800; text-decoration: none; }
   .accent-line { height: 2px; background: linear-gradient(90deg, #F0A800 0%, #F0A818 50%, transparent 100%); margin: 30px 0; }
+  .section-divider { background: #1a1a1a; padding: 14px 20px; border-radius: 8px; margin: 30px 0 20px 0; border-left: 4px solid #F0A818; font-size: 1.1em; color: #F0A818; font-weight: 600; }
 </style>
 </head>
 <body>
 
 <h1>Be Amazing Edutainment</h1>
-<p style="color:#888; font-size:1.1em; margin-top:0">Program DNA + Brand + SWOT + Strategic Insights • v6</p>
+<p style="color:#888; font-size:1.1em; margin-top:0">Program DNA + Brand + SWOT + Strategic Insights • v8 (2,591 videos, 585M views)</p>
 
 <div class="quote">
   "เราผู้ผลิต สื่อสร้างสรรค์เพื่อการเรียนรู้ในด้านต่าง ๆ ในรูปแบบที่หลากหลาย อาทิ คลิป VDO, รายการโทรทัศน์, ละคร, Workshop, สัมมนา คาราวาน, สื่อสิ่งพิมพ์, สื่อออนไลน์ และกิจกรรมส่งเสริมกระบวนการเรียนรู้สำหรับเด็ก ครอบครัว รวมไปถึงโรงเรียนและคุณครูในทุกรูปแบบ"<br>
@@ -80,27 +79,26 @@
   <h2 style="border:none; margin-top:0">📊 สรุปภาพรวม</h2>
   <div class="stats">
     <div class="stat"><div class="v">20+</div><div class="l">ปี ประสบการณ์</div></div>
-    <div class="stat"><div class="v">2,103</div><div class="l">Total Episodes</div></div>
-    <div class="stat"><div class="v">340M+</div><div class="l">Total Views</div></div>
-    <div class="stat"><div class="v">14</div><div class="l">Programs</div></div>
-    <div class="stat"><div class="v">42</div><div class="l">videos 1M+</div></div>
+    <div class="stat"><div class="v">2,591</div><div class="l">Total Episodes</div></div>
+    <div class="stat"><div class="v">585M+</div><div class="l">Total Views</div></div>
+    <div class="stat"><div class="v">29</div><div class="l">Programs (14 TPBS + 15 Be STEAM)</div></div>
+    <div class="stat"><div class="v">45</div><div class="l">videos 1M+</div></div>
     <div class="stat"><div class="v">29+</div><div class="l">Awards (Intl.)</div></div>
     <div class="stat"><div class="v">5</div><div class="l">Co-pro ต่างประเทศ</div></div>
-    <div class="stat"><div class="v">3</div><div class="l">Channels (ALTV4/TPBS/TPBS Kids)</div></div>
+    <div class="stat"><div class="v">3</div><div class="l">Channels (ALTV4/TPBS Kids/Be STEAM)</div></div>
   </div>
 </div>
 
-<!-- ============================== PROGRAM DNA ============================== -->
-<h2>🧬 Program DNA (วิเคราะห์จาก 2,103 episodes)</h2>
-<p style="color:#888">วิเคราะห์ Format, Hook, Tone, Duration, Audience, ตัวละคร, Top Viral — จาก description + tags + title patterns ของแต่ละรายการ</p>
+<!-- ============================== PROGRAM DNA — THAIPBS KIDS ============================== -->
+<div class="section-divider">📺 ThaiPBS Kids (14 programs) — รายการโทรทัศน์ + YouTube</div>
 
 <!-- บ้านนักวิทยาศาสตร์น้อย -->
 <div class="dna-card">
   <h3>🔬 บ้านนักวิทยาศาสตร์น้อย</h3>
-  <div class="meta">⭐ FLAGSHIP | 1,094 ตอน | 218.5M views (64% ของทั้งหมด) | 2015-2026 | NSMThailand + ThaiPBS Kids</div>
+  <div class="meta">⭐ FLAGSHIP | 1,094 ตอน | 218.5M views (37% ของทั้งหมด) | 2015-2026 | NSMThailand + ThaiPBS Kids</div>
   <div class="dna-grid">
     <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">ALTV4 + ThaiPBS Kids</div></div>
-    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~10 นาที (5-15m)</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~10 นาที</div></div>
     <div class="dna-stat"><div class="l">👶 Target</div><div class="v">อนุบาล 0-6 ปี</div></div>
     <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">48.0M (จระเข้)</div></div>
     <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">199,718</div></div>
@@ -111,7 +109,7 @@
     <dt>🎤 Hook:</dt><dd>"สิ่งนี้คืออะไร? ทำไมเป็นแบบนี้? มาทดลองกัน!" + ชื่อเรื่องเป็นสิ่งของ/สัตว์/ปรากฏการณ์</dd>
     <dt>🎨 Tone:</dt><dd>สนุก ตื่นเต้น อยากรู้ อบอุ่น — เหมือนคุณแม่/คุณครูเล่าให้ฟัง</dd>
     <dt>🎭 ตัวละคร:</dt><dd>เด็กนักวิทย์ตัวน้อย + Animation ช่วยเล่าเรื่อง</dd>
-    <dt>🏆 โดดเด่น:</dt><dd>รางวัลนานาชาติ (Japan Prize, ABU, Prix Jeunesse) + 800+ ตอน + Top viral ของ brand</dd>
+    <dt>🏆 โดดเด่น:</dt><dd>รางวัลนานาชาติ (Japan Prize, ABU, Prix Jeunesse) + Top viral ของ brand</dd>
     <dt>📌 Top 5 Viral:</dt>
   </dl>
   <div style="margin: 6px 0 12px 0">
@@ -123,24 +121,23 @@
   </div>
   <dl class="dna-detail">
     <dt>🏷 Tags:</dt><dd>การ์ตูน, เด็ก, ประดิษฐ์, วิทยาศาสตร์, สอนภาษาอังกฤษ</dd>
-    <dt>📝 Sample Hook:</dt><dd>"แม่เหล็กดูดเหล็กได้เพราะมี สนามแม่เหล็ก เมื่อเหล็กอยู่ใกล้ ๆ สนามแม่เหล็กจะจัดเรียงอนุภาคเล็ก ๆ ในเหล็กให้หันไปทางเดียวกัน..."</dd>
   </dl>
 </div>
 
 <!-- คิดวิทย์ -->
 <div class="dna-card">
-  <h3>🔍 คิดวิทย์ (พิชิตคดีปริศนา / ชวนคิดกับนักวิทย์น้อย / เช้าชวนคิด)</h3>
+  <h3>🔍 คิดวิทย์ (พิชิตคดีปริศนา / ชวนคิดกับนักวิทย์น้อย)</h3>
   <div class="meta">⭐ TOP 2 | 217 ตอน | 72.7M views | 2020-2023 | ThaiPBS Kids</div>
   <div class="dna-grid">
     <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">ThaiPBS Kids</div></div>
-    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~18 นาที (15m+)</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~18 นาที</div></div>
     <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ประถม 7-12 ปี</div></div>
     <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">31.9M (พืชกินแมลง)</div></div>
     <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">334,800</div></div>
     <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">สืบสวน + ทดลอง</div></div>
   </div>
   <dl class="dna-detail">
-    <dt>🎯 Format:</dt><dd>2 sub-formats: <b>"ชวนคิดกับนักวิทย์น้อย"</b> (เล่าตรง ๆ) + <b>"พิชิตคดีปริศนา"</b> (สืบสวน นักสืบตามหาเบาะแส)</dd>
+    <dt>🎯 Format:</dt><dd>2 sub-formats: <b>"ชวนคิดกับนักวิทย์น้อย"</b> (เล่าตรง ๆ) + <b>"พิชิตคดีปริศนา"</b> (สืบสวน)</dd>
     <dt>🎤 Hook:</dt><dd>"สัปดาห์นี้ !! คิดวิทย์ พิชิตคดีปริศนา นักสืบต้องตามหา..." + "มีเรื่องชวนสงสัย..."</dd>
     <dt>🎨 Tone:</dt><dd>ลึกลับ ตื่นเต้น อยากรู้ — เหมือนดู CSI เวอร์ชันเด็ก</dd>
     <dt>🎭 ตัวละคร:</dt><dd>นักสืบเด็ก + นักวิทย์น้อย + เพื่อนผู้ช่วย</dd>
@@ -153,10 +150,6 @@
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">3.8M ไข่ (ชวนคิด)</span>
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">1.8M การพรางตัว</span>
   </div>
-  <dl class="dna-detail">
-    <dt>🏷 Tags:</dt><dd>วิทยาศาสตร์, ย้อนหลัง, ประดิษฐ์, การ์ตูน, ภาพลวงตา</dd>
-    <dt>📝 Sample Hook:</dt><dd>"นักสืบต้องตามหาสาเหตุของสารปริศนาที่ลอยอยู่ในบ่อน้ำพุร้อน เป็นสาเหตุให้ผู้คนแตกตื่น..."</dd>
-  </dl>
 </div>
 
 <!-- Kid Rangers -->
@@ -165,31 +158,25 @@
   <div class="meta">⭐ TOP 3 | 416 ตอน | 44.7M views | 2017-2026 | ALTV4 + ThaiPBS Kids</div>
   <div class="dna-grid">
     <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">ALTV4 + ThaiPBS Kids</div></div>
-    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~22 นาที (15m+)</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~22 นาที</div></div>
     <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ประถม 7-12 ปี</div></div>
     <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">3.8M (เชิดสิงโต)</div></div>
     <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">107,486</div></div>
     <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">Adventure + ลงพื้นที่</div></div>
   </div>
   <dl class="dna-detail">
-    <dt>🎯 Format:</dt><dd>ผู้ใหญ่ 2 คน (พี่เพชร/พี่โต) + เด็กเรนเจอร์ 4-5 คน ลงพื้นที่ทั่วไทย ทำภารกิจวิทยาศาสตร์ + สำรวจธรรมชาติ</dd>
+    <dt>🎯 Format:</dt><dd>ผู้ใหญ่ 2 คน (พี่เพชร/พี่โต) + เด็กเรนเจอร์ 4-5 คน ลงพื้นที่ทั่วไทย</dd>
     <dt>🎤 Hook:</dt><dd>"ภารกิจในครั้งนี้ พี่เพชร และเหล่าเรนเจอร์ส จะพาทุกคน..."</dd>
-    <dt>🎨 Tone:</dt><dd>Adventure ตื่นเต้น กล้าหาญ ท้าทาย — เหมือนดูรายการสารคดีเด็ก</dd>
+    <dt>🎨 Tone:</dt><dd>Adventure ตื่นเต้น กล้าหาญ ท้าทาย</dd>
     <dt>🎭 ตัวละคร:</dt><dd>พี่เพชร (ผู้นำ) + พี่โต (ผู้ช่วย) + เด็กเรนเจอร์ 4-5 คน</dd>
-    <dt>🏆 โดดเด่น:</dt><dd>รางวัลทีวีทองคำ (2018) + ทีวีสีขาว (2021) + ลงพื้นที่ทั่วประเทศ</dd>
-    <dt>📌 Top 5 Viral:</dt>
+    <dt>🏆 โดดเด่น:</dt><dd>รางวัลทีวีทองคำ (2018) + ทีวีสีขาว (2021)</dd>
+    <dt>📌 Top 3 Viral:</dt>
   </dl>
   <div style="margin: 6px 0 12px 0">
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">3.8M ฝึกเชิดสิงโต</span>
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">2.9M กิ้งกือ VS ไส้เดือน</span>
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">2.9M หนอนไม้ไผ่</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">2.4M กระเบนน้ำจืด</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">1.9M นกแคสโซแวรี</span>
   </div>
-  <dl class="dna-detail">
-    <dt>🏷 Tags:</dt><dd>การ์ตูน, ประดิษฐ์, สอนภาษาอังกฤษ, เด็ก, ย้อนหลัง</dd>
-    <dt>📝 Sample Hook:</dt><dd>"พี่เพชรและเหล่าเรนเจอร์สออกเรือผจญภัยตามหาวาฬบรูด้า ทำไมวาฬบรูด้าถึงมาอยู่ในทะเลอ่าวไทยได้..."</dd>
-  </dl>
 </div>
 
 <!-- JIGSAW -->
@@ -205,11 +192,9 @@
     <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">Hero + ความแตกต่าง</div></div>
   </div>
   <dl class="dna-detail">
-    <dt>🎯 Format:</dt><dd>เด็กที่มีความสามารถพิเศษแตกต่างกัน (เหมือนจิ๊กซอแต่ละชิ้น) แต่ละคนมีคุณค่า → เรียนรู้เรื่องต่าง ๆ ผ่านเด็ก</dd>
+    <dt>🎯 Format:</dt><dd>เด็กที่มีความสามารถพิเศษแตกต่างกัน (เหมือนจิ๊กซอแต่ละชิ้น) แต่ละคนมีคุณค่า</dd>
     <dt>🎤 Hook:</dt><dd>"เด็กแต่ละคนมีความแตกต่าง แต่ทุกคนมีคุณค่า" + "บรรดาจิ๊กซอว์จากทางบ้าน ที่จะออกไปค้นหาแววความถนัด"</dd>
-    <dt>🎨 Tone:</dt><dd>อบอุ่น ให้กำลังใจ เห็นคุณค่าในตัวเอง — เป็นรายการ Hero ที่สร้าง self-esteem</dd>
-    <dt>🎭 ตัวละคร:</dt><dd>เด็กมีความสามารถพิเศษ (นักขับรถ, นักเตะบอล, ลิเก, นักร้อง ฯลฯ)</dd>
-    <dt>🏆 โดดเด่น:</dt><dd>ได้รางวัล Japan Prize 2021 + Prix Jeunesse 2022 + Gender Equity Nominee 2022</dd>
+    <dt>🏆 โดดเด่น:</dt><dd>Japan Prize 2021 + Prix Jeunesse 2022 + Gender Equity Nominee</dd>
     <dt>📌 Top 3 Viral:</dt>
   </dl>
   <div style="margin: 6px 0 12px 0">
@@ -217,10 +202,6 @@
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">25.6K สองแสบเชิดสิงโต</span>
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">24.0K ดาวร้ายลิเกตัวน้อย</span>
   </div>
-  <dl class="dna-detail">
-    <dt>🏷 Tags:</dt><dd>ย้อนหลัง, วิทยาศาสตร์, ประดิษฐ์, การ์ตูน</dd>
-    <dt>📝 Sample Hook:</dt><dd>"Jigsaw ต่อพลังคิดสัปดาห์นี้พบกับเรื่องราวของยูทูบเบอร์สายตรงทำทรงอย่างกับนกแก้ว และบรรดาจิ๊กซอว์จากทางบ้าน..."</dd>
-  </dl>
 </div>
 
 <!-- สังคม สนุกคิด -->
@@ -236,10 +217,9 @@
     <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">เล่าเรื่อง + Animation</div></div>
   </div>
   <dl class="dna-detail">
-    <dt>🎯 Format:</dt><dd>พี่วิว (Youtuber ชื่อดัง) เล่าเรื่อง + ภาพการ์ตูนน่ารัก + เด็กเล่า</dd>
-    <dt>🎤 Hook:</dt><dd>เปิดด้วยคำถามตั้งต้น เช่น "วันคริสตมาสเนี่ยเค้าฉลองกันทำไม แล้วลุงซานตาคลอสเนี่ยเป็นใคร"</dd>
-    <dt>🎨 Tone:</dt><dd>อบอุ่น เป็นกันเอง เล่าเรื่องสนุก เหมือนพี่สอนน้อง</dd>
-    <dt>🎭 ตัวละคร:</dt><dd>พี่วิว (presenter หลัก) + เด็ก ๆ ที่มาเล่าประสบการณ์</dd>
+    <dt>🎯 Format:</dt><dd>พี่วิว (Youtuber) เล่าเรื่อง + ภาพการ์ตูนน่ารัก + เด็กเล่า</dd>
+    <dt>🎤 Hook:</dt><dd>เปิดด้วยคำถามตั้งต้น เช่น "วันคริสตมาสเนี่ยเค้าฉลองกันทำไม"</dd>
+    <dt>🎭 ตัวละคร:</dt><dd>พี่วิว + เด็ก ๆ</dd>
     <dt>📌 Top 3 Viral:</dt>
   </dl>
   <div style="margin: 6px 0 12px 0">
@@ -247,10 +227,6 @@
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">123K อารยธรรมจีน</span>
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">116K อารยธรรมอินเดีย</span>
   </div>
-  <dl class="dna-detail">
-    <dt>🏷 Tags:</dt><dd>ย้อนหลัง, วิทยาศาสตร์, ประดิษฐ์, การ์ตูน</dd>
-    <dt>📝 Sample Hook:</dt><dd>"วันคริสตมาสเนี่ยเค้าฉลองกันทำไม แล้วลุงซานตาคลอสเนี่ยเป็นใคร ทำไมถึงต้องมาแจกของขวัญเด็ก ๆ ในวันนี้ด้วย"</dd>
-  </dl>
 </div>
 
 <!-- คิดสิ...ต้องรอด -->
@@ -266,9 +242,8 @@
     <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">Survival + Safety</div></div>
   </div>
   <dl class="dna-detail">
-    <dt>🎯 Format:</dt><dd>สถานการณ์จริง → ตั้งคำถาม "ถ้าเจอแบบนี้จะทำยังไง?" → สอนวิธีรอด → ทดลองจริง</dd>
-    <dt>🎤 Hook:</dt><dd>"รอดจาก... [สถานการณ์] : คิดสิ...ต้องรอด" (เป็นชื่อเรื่องซ้ำรูปแบบ)</dd>
-    <dt>🎨 Tone:</dt><dd>จริงจัง ตื่นเต้น กระชับ ให้ข้อมูลที่ใช้ได้จริง</dd>
+    <dt>🎯 Format:</dt><dd>สถานการณ์จริง → "ถ้าเจอแบบนี้จะทำยังไง?" → สอนวิธีรอด → ทดลองจริง</dd>
+    <dt>🎤 Hook:</dt><dd>"รอดจาก... [สถานการณ์] : คิดสิ...ต้องรอด"</dd>
     <dt>📌 Top 3 Viral:</dt>
   </dl>
   <div style="margin: 6px 0 12px 0">
@@ -276,10 +251,6 @@
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">8K รอดจากแผ่นดินไหว</span>
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">7K รอดจากลิฟต์ตก</span>
   </div>
-  <dl class="dna-detail">
-    <dt>🏷 Tags:</dt><dd>รายการเด็ก, ประดิษฐ์, การ์ตูน, สอนภาษาอังกฤษ</dd>
-    <dt>📝 Sample Hook:</dt><dd>"การนอนในรถอาจจะเป็นอันตรายกับเราได้ อย่างที่เป็นข่าวให้เห็นอยู่บ่อย ๆ แล้วถ้าเพื่อน ๆ เผลอนอนหลับในรถ เพื่อน ๆ จะทำอย่างไรให้รอด"</dd>
-  </dl>
 </div>
 
 <!-- คิดส์เรียนรู้ -->
@@ -295,9 +266,8 @@
     <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">Clip ย่อย 2 นาที</div></div>
   </div>
   <dl class="dna-detail">
-    <dt>🎯 Format:</dt><dd>Clip สั้น 2 นาที ตัดจาก Kid Rangers เต็มตอน — เน้น 1 ไฮไลต์</dd>
-    <dt>🎤 Hook:</dt><dd>"[หัวข้อเด่น] : คิดส์เรียนรู้ | Kid Rangers ปฏิบัติการเด็กช่างคิด"</dd>
-    <dt>🎨 Tone:</dt><dd>กระชับ เข้าใจง่าย เหมือนดู highlight</dd>
+    <dt>🎯 Format:</dt><dd>Clip สั้น 2 นาที ตัดจาก Kid Rangers เต็มตอน</dd>
+    <dt>🎤 Hook:</dt><dd>"[หัวข้อเด่น] : คิดส์เรียนรู้ | Kid Rangers"</dd>
     <dt>📌 Top 3 Viral:</dt>
   </dl>
   <div style="margin: 6px 0 12px 0">
@@ -305,9 +275,23 @@
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">94K ป่าชายเลน</span>
     <span class="tag-chip" style="background:#2a2418; color:#F0A800">83K นกยูง</span>
   </div>
+</div>
+
+<!-- คิดวิทย์ - ช่วงประดิษฐ์ และทดลอง -->
+<div class="dna-card">
+  <h3>🔬 คิดวิทย์ - ช่วงประดิษฐ์ และทดลอง</h3>
+  <div class="meta">7 ตอน | 16K views | 2016 | ThaiPBS Kids</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">ThaiPBS Kids</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~1.5 นาที (Short)</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ประถม</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">10K (การทดลองเรื่องควัน)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">2,271</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">Short Clip ทดลอง</div></div>
+  </div>
   <dl class="dna-detail">
-    <dt>🏷 Tags:</dt><dd>ย้อนหลัง, ประดิษฐ์, วิทยาศาสตร์, การ์ตูน</dd>
-    <dt>📝 Sample Hook:</dt><dd>"Transformers บ้านนา สุดยอดยานยนต์ทางการเกษตร : คิดส์เรียนรู้"</dd>
+    <dt>🎯 Format:</dt><dd>เด็กนักเรียนทำการทดลอง → ตัดเป็น clip 1-2 นาที</dd>
+    <dt>🎤 Hook:</dt><dd>"น้องๆ จากโรงเรียน[ชื่อ] จะมาทำการทดลองเกี่ยวกับเรื่อง[หัวข้อ]"</dd>
   </dl>
 </div>
 
@@ -325,18 +309,7 @@
   </div>
   <dl class="dna-detail">
     <dt>🎯 Format:</dt><dd>สารคดีสืบสวนเทคโนโลยี → ทดลอง → รีวิว → ให้ข้อคิด</dd>
-    <dt>🎤 Hook:</dt><dd>"[ประเด็นเทคโนโลยี] : Tic Tac Tech เรื่องไม่เล็กเทคโนโลยี" เช่น "QR CODE สแกนแล้วไปไหน ปลอดภัยหรือเปล่า?"</dd>
-    <dt>🎨 Tone:</dt><dd>จริงจัง ตรงไปตรงมา ให้ข้อมูลที่เป็นประโยชน์</dd>
-    <dt>📌 Top 3 Viral:</dt>
-  </dl>
-  <div style="margin: 6px 0 12px 0">
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">4K Hate Speech</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">3K QR CODE</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">2.5K แอปหาคู่</span>
-  </div>
-  <dl class="dna-detail">
-    <dt>🏷 Tags:</dt><dd>ย้อนหลัง, ย้อนหลังล่าสุด, thaipbs, รายการเด็ก</dd>
-    <dt>📝 Sample Hook:</dt><dd>"ยุคนี้สมัยนี้ ข่าวสารออนไลน์ในโซเชียล มีให้เราติดตามกันไม่เว้นแต่ละวัน ไม่ว่าจะข่าวเศรษฐกิจ..."</dd>
+    <dt>🎤 Hook:</dt><dd>"[ประเด็นเทคโนโลยี] : Tic Tac Tech เรื่องไม่เล็กเทคโนโลยี"</dd>
   </dl>
 </div>
 
@@ -353,19 +326,8 @@
     <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">Career Training + Reality</div></div>
   </div>
   <dl class="dna-detail">
-    <dt>🎯 Format:</dt><dd>วัยรุ่น 6 คนที่มีความฝัน → ฝึกงานจริงกับมืออาชีพ → เรียนรู้ทักษะ → สรุปบทเรียน</dd>
-    <dt>🎤 Hook:</dt><dd>"ฝึกงานอาชีพ[ชื่ออาชีพ] : ภารกิจพิชิตฝัน" เช่น "ฝึกงานอาชีพเชฟ" "ฝึกงานอาชีพ Game Developer"</dd>
-    <dt>🎨 Tone:</dt><dd>จริงจัง เข้มข้น สร้างแรงบันดาลใจ</dd>
-    <dt>📌 Top 3 Viral:</dt>
-  </dl>
-  <div style="margin: 6px 0 12px 0">
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">6K อาชีพเชฟ</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">1.4K Game Developer</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">1.4K นักโภชนาการ</span>
-  </div>
-  <dl class="dna-detail">
-    <dt>🏷 Tags:</dt><dd>altv4, การศึกษา, คณิตศาสตร์, วิทยาศาสตร์</dd>
-    <dt>📝 Sample Hook:</dt><dd>"เหล่าวัยรุ่นทั้ง 6 คน ที่มีความฝันในสายอาชีพศิลปะ และวิทยาการการประกอบอาหารจะได้เรียนรู้ และฝึกฝนทักษะ กับอาชีพเชฟจากมืออาชีพ"</dd>
+    <dt>🎯 Format:</dt><dd>วัยรุ่น 6 คน → ฝึกงานจริงกับมืออาชีพ → เรียนรู้ทักษะ</dd>
+    <dt>🎤 Hook:</dt><dd>"ฝึกงานอาชีพ[ชื่ออาชีพ] : ภารกิจพิชิตฝัน"</dd>
   </dl>
 </div>
 
@@ -383,18 +345,7 @@
   </div>
   <dl class="dna-detail">
     <dt>🎯 Format:</dt><dd>ปัญหาการเงินจริง → ทดลองใช้เครื่องมือ (แอป, วิธีออม) → ผลลัพธ์</dd>
-    <dt>🎤 Hook:</dt><dd>"[ปัญหาเงิน ๆ] | Money Mindset ใช้เป็น เห็นเงิน" เช่น "เงินเดือน ใช้อย่างไรให้ครบเดือน"</dd>
-    <dt>🎨 Tone:</dt><dd>ใกล้ตัว ใช้ได้จริง เข้าใจง่าย</dd>
-    <dt>📌 Top 3 Viral:</dt>
-  </dl>
-  <div style="margin: 6px 0 12px 0">
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">1.4K Money Trick แอปจดรายรับ-จ่าย</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">657 เงินเดือนใช้อย่างไรให้ครบเดือน</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">573 เงินมาแล้วไปไหน</span>
-  </div>
-  <dl class="dna-detail">
-    <dt>🏷 Tags:</dt><dd>altv4, การศึกษา, คณิตศาสตร์, วิทยาศาสตร์</dd>
-    <dt>📝 Sample Hook:</dt><dd>"เงินที่มีเก็บไว้ก็ไม่งอกเงย แล้วแบบนี้ต้องทำยังไงให้แค่เรื่องของการฝาก สร้างได้ให้เรากันละ"</dd>
+    <dt>🎤 Hook:</dt><dd>"[ปัญหาเงิน ๆ] | Money Mindset ใช้เป็น เห็นเงิน"</dd>
   </dl>
 </div>
 
@@ -412,72 +363,286 @@
   </div>
   <dl class="dna-detail">
     <dt>🎯 Format:</dt><dd>คณิตศาสตร์ผ่านสถานการณ์จริง เช่น คาเฟ่ ฟาร์ม สวนสนุก ดนตรี</dd>
-    <dt>🎤 Hook:</dt><dd>"คณิต[สถานการณ์] | Mad Math คณิตติดมันส์" เช่น "คณิตกับดนตรี", "คณิตในฟาร์ม"</dd>
-    <dt>🎨 Tone:</dt><dd>สนุก มีชีวิตชีวา เห็นคณิตในชีวิตประจำวัน</dd>
-    <dt>📌 Top 3 Viral:</dt>
-  </dl>
-  <div style="margin: 6px 0 12px 0">
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">2.5K คณิตกับดนตรี</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">2.0K คณิตกับการท่องเที่ยว</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">1.9K คณิตในฟาร์ม</span>
-  </div>
-  <dl class="dna-detail">
-    <dt>🏷 Tags:</dt><dd>thai pbs kids, รายการเด็ก, ช่องเด็ก, ย้อนหลัง</dd>
-    <dt>📝 Sample Hook:</dt><dd>"เริ่มตั้งแต่เตรียมวัตถุดิบหลังเคาน์เตอร์บาริสต้า อัตราส่วนที่ชั่งตวงอย่างแม่นยำเพื่อให้ได้เครื่องดื่มแก้วพิเศษ และขนมเค้กหลากดีไซน์..."</dd>
+    <dt>🎤 Hook:</dt><dd>"คณิต[สถานการณ์] | Mad Math คณิตติดมันส์"</dd>
   </dl>
 </div>
 
-<!-- คิดวิทย์ - ช่วงประดิษฐ์ และทดลอง -->
-<div class="dna-card">
-  <h3>🔬 คิดวิทย์ - ช่วงประดิษฐ์ และทดลอง</h3>
-  <div class="meta">7 ตอน | 16K views | 2016 | ThaiPBS Kids</div>
+<!-- ============================== PROGRAM DNA — BE STEAM ============================== -->
+<div class="section-divider">🚀 Be STEAM Channel (15 programs) — YouTube-first, Short-form viral</div>
+
+<!-- H2OH -->
+<div class="dna-card besteam">
+  <h3>🔥 H2OH</h3>
+  <div class="meta">⭐ VIRAL FLAGSHIP | 155 ตอน | 230.9M views (39% ของทั้งหมด) | 2023-2026 | Be STEAM</div>
   <div class="dna-grid">
-    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">ThaiPBS Kids</div></div>
-    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~1.5 นาที (Short)</div></div>
-    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ประถม</div></div>
-    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">10K (การทดลองเรื่องควัน)</div></div>
-    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">2,271</div></div>
-    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">Short Clip ทดลอง</div></div>
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM YouTube</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~90 วินาที (Short)</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ทุกวัย (viral)</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">21.4M (สเลอปี้ละลาย)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">1,489,619</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">Viral Short experiment</div></div>
   </div>
   <dl class="dna-detail">
-    <dt>🎯 Format:</dt><dd>เด็กนักเรียนจากโรงเรียนต่าง ๆ → ทำการทดลองง่าย ๆ → ตัดเป็น clip 1-2 นาที</dd>
-    <dt>🎤 Hook:</dt><dd>"น้องๆ จากโรงเรียน[ชื่อโรงเรียน] จะมาทำการทดลองเกี่ยวกับเรื่อง[หัวข้อ]"</dd>
-    <dt>🎨 Tone:</dt><dd>ตรงไปตรงมา ให้เด็กนักเรียนเป็นคนทำ</dd>
+    <dt>🎯 Format:</dt><dd>ทดลองสั้น 60-90 วิ ที่ "ดูแล้วต้องร้องว้าว" — Reaction/Color/Physical effects</dd>
+    <dt>🎤 Hook:</dt><dd>"ทำไงดี!?" "ทำได้ไง?" "โยเกิร์ต" "สงกรานต์" — ใช้ Title แบบ clickbait อย่างปลอดภัย</dd>
+    <dt>🎨 Tone:</dt><dd>ตื่นเต้น เร็ว กระชับ — viral-first</dd>
+    <dt>🏆 โดดเด่น:</dt><dd>Platform ที่ทำเงินได้ดีที่สุดของ BA — 4 คลิป 10M+ views</dd>
     <dt>📌 Top 3 Viral:</dt>
   </dl>
   <div style="margin: 6px 0 12px 0">
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">10K การทดลองเรื่องควัน</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">2K ทำเข็มทิศ</span>
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">1.8K การ์ดป๊อปอัพ 3 มิติ</span>
+    <span class="tag-chip">21.4M สเลอปี้ละลาย</span>
+    <span class="tag-chip">20.1M ขีปนาวุธสงกรานต์</span>
+    <span class="tag-chip">15.9M มายากลน้ำเปลี่ยนสี</span>
   </div>
   <dl class="dna-detail">
-    <dt>🏷 Tags:</dt><dd>รายการเด็ก, ความรู้เด็ก, การ์ตูน, cartoon</dd>
-    <dt>📝 Sample Hook:</dt><dd>"น้องๆ จากโรงเรียนปัณณวิชญ์ จะมาทำการทดลองเกี่ยวกับเรื่องควัน โดยมีอุปกรณ์ดังนี้..."</dd>
+    <dt>🏷 Top words:</dt><dd>ทำไงดี(5), ทำได้ไง(3), สงกรานต์(2), โยเกิร์ต(2)</dd>
   </dl>
 </div>
 
-<!-- เกร็ดความรู้จาก Kid Rangers -->
-<div class="dna-card">
-  <h3>✂️ เกร็ดความรู้จากKid Rangers</h3>
-  <div class="meta">1 ตอน | 437 views | 2018 | ThaiPBS Kids</div>
+<!-- Nature เจอนี่ Shorts -->
+<div class="dna-card besteam">
+  <h3>🐾 Nature เจอนี่ l Shorts</h3>
+  <div class="meta">100 ตอน | 10.9M views | Be STEAM Shorts</div>
   <div class="dna-grid">
-    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">ThaiPBS Kids</div></div>
-    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~3.8 นาที (Short)</div></div>
-    <div class="dna-stat"><div class="l">📊 Status</div><div class="v">⚠️ มีแค่ 1 ตอน</div></div>
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM Shorts</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~60 วินาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ทุกวัย (viral)</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">1.7M (หมูเด้ง)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">109,298</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">สัตว์น่ารัก 1 นาที</div></div>
   </div>
   <dl class="dna-detail">
-    <dt>🎯 Format:</dt><dd>Clip สั้น ตัดจาก Kid Rangers</dd>
-    <dt>📌 Top Viral:</dt>
+    <dt>🎯 Format:</dt><dd>สัตว์น่ารัก 1 ตัว + นวัตกรรม/ข้อเท็จจริงสั้น ๆ</dd>
+    <dt>🎤 Hook:</dt><dd>"[สัตว์] [นวัตกรรม/คุณสมบัติ]" เช่น "หมูเด้ง ฮิปโปแคระ 🦛"</dd>
+    <dt>📌 Top 3 Viral:</dt>
   </dl>
   <div style="margin: 6px 0 12px 0">
-    <span class="tag-chip" style="background:#2a2418; color:#F0A800">437 เป่าแก้ว</span>
+    <span class="tag-chip">1.7M หมูเด้งฮิปโปแคระ</span>
+    <span class="tag-chip">1.6M ลิ้นยาวแค่ไหน</span>
+    <span class="tag-chip">884K ด้วงกว่างยาวที่สุดในโลก</span>
   </div>
+</div>
+
+<!-- Detective -->
+<div class="dna-card besteam">
+  <h3>🔎 Detective</h3>
+  <div class="meta">18 ตอน | 1.5M views | Be STEAM Shorts</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM Shorts</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~60 วินาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ทุกวัย</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">301K (ดาดฟ้าจอมโจร)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">80,615</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">สืบคดี 1 นาที</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>คดีสั้น ๆ → ไขใน 60 วิ → เฉลย</dd>
+    <dt>🎤 Hook:</dt><dd>"เฉลย❗[คำถาม] [ไอคอน]" เช่น "เฉลย❗️วิธีหนีจากดาดฟ้าจอมโจรขโมยเพชร 💎❓"</dd>
+  </dl>
+</div>
+
+<!-- Think ต๊อง Shorts -->
+<div class="dna-card besteam">
+  <h3>🤔 Think ต๊อง ต้อง Think l Shorts</h3>
+  <div class="meta">65 ตอน | 985K views | Be STEAM Shorts</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM Shorts</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~57 วินาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ทุกวัย (curious)</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">127K (รอดตายเพราะชีสเบอร์เกอร์)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">15,155</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">คำถามต๊อง 1 นาที</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>คำถามแปลก ๆ เช่น "กินชีสแล้วอ้วนจริงไหม", "โถฉี่ผู้หญิงหายไปไหน", "มนุษย์กินชีสมากแค่ไหนถึงตุย" → เฉลยใน 60 วิ</dd>
+    <dt>🎤 Hook:</dt><dd>"[คำถามต๊อง ๆ] ⁉️" — ใช้อิโมจิ ❓เยอะ ๆ</dd>
+  </dl>
+</div>
+
+<!-- Proud เว่อร์ Shorts -->
+<div class="dna-card besteam">
+  <h3>💪 Proud เว่อร์ Shorts</h3>
+  <div class="meta">49 ตอน | 451K views | Be STEAM Shorts</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM Shorts</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~80 วินาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ทุกวัย</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">16.6K (รถบัสไฟไหม้)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">9,198</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">เด็กเก่ง 1 นาที</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>Clip ตัดจาก Proud เว่อร์ เต็ม → เด็กเก่ง/กล้าหาญ 1 นาที</dd>
+    <dt>🎤 Hook:</dt><dd>"[เหตุการณ์] [อิโมจิ] เด็ก ๆ ต้อง[ผลลัพธ์]❗"</dd>
+  </dl>
+</div>
+
+<!-- เฮ้ย จริงปะเนี่ย -->
+<div class="dna-card besteam">
+  <h3>❓ เฮ้ย จริงปะเนี่ย !?</h3>
+  <div class="meta">11 ตอน | 140K views | Be STEAM Shorts</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM Shorts</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~81 วินาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ทุกวัย</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">32K (วงกลมประหลาด)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">12,722</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">เรื่องเหลือเชื่อ</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>เรื่องราว/การค้นพบที่เหลือเชื่อ เช่น วงกลมประหลาด, 3D printing หัวใจ, ไดโนเสาร์ตัวใหม่</dd>
+    <dt>🎤 Hook:</dt><dd>"เฮ้ย จริงปะเนี่ย !? [ประเด็น]❗"</dd>
+  </dl>
+</div>
+
+<!-- Proud เว่อร์ (Full) -->
+<div class="dna-card besteam">
+  <h3>🌟 Proud เว่อร์ (Full Version)</h3>
+  <div class="meta">25 ตอน | 59K views | Be STEAM</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM YouTube</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~12 นาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ทุกวัย</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">22.7K (สิงโตน้อย)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">2,361</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">สารคดีเด็กเก่ง</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>เด็กที่มีความสามารถพิเศษ 1 คน ต่อ 1 ตอน</dd>
+    <dt>🎤 Hook:</dt><dd>"รายการ Proud เว่อร์ EP.[X] [ชื่อเด็ก]"</dd>
+  </dl>
+</div>
+
+<!-- เชื่อไหมผู้ใหญ่บอกว่า -->
+<div class="dna-card besteam">
+  <h3>🤔 เชื่อไหมผู้ใหญ่บอกว่า</h3>
+  <div class="meta">29 ตอน | 29K views | Be STEAM</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~6 นาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ทุกวัย</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">2.5K (หมูกระทะซ่อนปีศาจ)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">1,017</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">Fact vs Myth</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>ความเชื่อของผู้ใหญ่ → ทดสอบจริง → เฉลย</dd>
+    <dt>🎤 Hook:</dt><dd>"[ความเชื่อ] จริงหรือ?"</dd>
+  </dl>
+</div>
+
+<!-- เต็ม STEAM Shorts -->
+<div class="dna-card besteam">
+  <h3>💬 เต็ม STEAM Shorts</h3>
+  <div class="meta">6 ตอน | 20K views | Be STEAM Shorts</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM Shorts</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~54 วินาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ผู้ปกครอง/ครู</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">13K (ถอดรหัส PISA)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">3,375</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">Clip ครู/ผู้เชี่ยวชาญ</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>หัวข้อการศึกษา → สัมภาษณ์/อธิบายสั้น ๆ → Call-to-action</dd>
+    <dt>🎤 Hook:</dt><dd>"[ประเด็นการศึกษา]" เช่น "ถอดรหัสข้อสอบ PISA", "AI กับการศึกษาไทย"</dd>
+  </dl>
+</div>
+
+<!-- Nature เจอนี่ -->
+<div class="dna-card besteam">
+  <h3>🦎 Nature เจอนี่ (Full)</h3>
+  <div class="meta">4 ตอน | 13K views | Be STEAM</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~6 นาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ทุกวัย</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">5.2K (ฮอร์นฟรอก)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">3,159</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">สารคดีสัตว์ 6 นาที</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>สัตว์น่าสนใจ 1 ชนิด → ลงพื้นที่ → เล่าเรื่องราว</dd>
+    <dt>🎤 Hook:</dt><dd>"Nature เจอนี่ I EP[X] [ชื่อสัตว์]"</dd>
+  </dl>
+</div>
+
+<!-- Think ต๊อง Full -->
+<div class="dna-card besteam">
+  <h3>🤯 Think ต๊อง ต้อง Think (Full)</h3>
+  <div class="meta">6 ตอน | 12K views | Be STEAM</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~9 นาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">ทุกวัย (curious)</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">3.3K (เสียงว๊าก)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">2,007</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">คำถามต๊อง ๆ (long-form)</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>คำถามแปลก ๆ → สำรวจข้อมูล → เฉลยแบบยาว</dd>
+    <dt>🎤 Hook:</dt><dd>"Think ต๊อง ต้อง Think I EP[X] [คำถาม]"</dd>
+  </dl>
+</div>
+
+<!-- PlaySTEAMtion Shorts -->
+<div class="dna-card besteam">
+  <h3>🧸 PlaySTEAMtion Shorts</h3>
+  <div class="meta">3 ตอน | 7.4K views | Be STEAM Shorts</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM Shorts</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~60 วินาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">เด็ก/ครอบครัว</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">3.6K (ระบบสุริยะน้ำเกลือ)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">2,467</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">ของเล่นวิทยาศาสตร์ 1 นาที</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>ของเล่น 1 ชิ้น → ทดลอง → เล่าแบบสนุก</dd>
+    <dt>🎤 Hook:</dt><dd>"[ของเล่น/การทดลอง] #STEAM #Science #Toys"</dd>
+  </dl>
+</div>
+
+<!-- Cyber Ranger -->
+<div class="dna-card besteam">
+  <h3>🛡️ Cyber Ranger แก๊งป่วนพิทักษ์ภัยไซเบอร์</h3>
+  <div class="meta">15 ตอน | 7K views | Be STEAM</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~7 นาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">เด็ก 7-12 ปี</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">1.6K (รูปลับ)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">463</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">Animation ภัยไซเบอร์</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>Animation แก๊งเด็ก + ภัยไซเบอร์ (Deepfake/Bullying/บุหรี่ไฟฟ้า/PM 2.5)</dd>
+    <dt>🎤 Hook:</dt><dd>"แก๊งป่วนพิทักษ์ภัยไซเบอร์ | EP.X [ชื่อภัย]"</dd>
+  </dl>
+</div>
+
+<!-- PlaySTEAMtion -->
+<div class="dna-card besteam">
+  <h3>🛠️ PlaySTEAMtion (Full)</h3>
+  <div class="meta">2 ตอน | 3K views | Be STEAM</div>
+  <div class="dna-grid">
+    <div class="dna-stat"><div class="l">📺 Platform</div><div class="v">Be STEAM</div></div>
+    <div class="dna-stat"><div class="l">⏱ Duration</div><div class="v">~5-6 นาที</div></div>
+    <div class="dna-stat"><div class="l">👶 Target</div><div class="v">เด็ก/ครอบครัว</div></div>
+    <div class="dna-stat"><div class="l">📊 Max Views</div><div class="v">1.6K (ลูกข่าง GoShoot)</div></div>
+    <div class="dna-stat"><div class="l">📈 Avg/EP</div><div class="v">1,525</div></div>
+    <div class="dna-stat"><div class="l">🎨 Style</div><div class="v">ของเล่นวิทยาศาสตร์</div></div>
+  </div>
+  <dl class="dna-detail">
+    <dt>🎯 Format:</dt><dd>ของเล่น 1 ชิ้น → เล่นจริง → ทดลอง</dd>
+    <dt>🎤 Hook:</dt><dd>"PlaySTEAMtion EP[X] I [ชื่อของเล่น/การทดลอง]"</dd>
+  </dl>
 </div>
 
 <!-- ============================== BRAND DNA ============================== -->
 <h2>🎯 Brand DNA</h2>
 
-<div class="dna" style="background:#1a1a1a; border-left: 4px solid #F0A800; padding: 20px; border-radius: 8px; margin: 14px 0;">
+<div class="dna">
   <h4>🧬 Brand Pillars</h4>
   <div>
     <span class="brand-pill">🎓 สื่อสร้างสรรค์เพื่อการเรียนรู้</span>
@@ -485,16 +650,16 @@
     <span class="brand-pill">👨‍👩‍👧 เด็ก + ครอบครัว + ครู</span>
     <span class="brand-pill">🌏 มาตรฐานสากล เข้าถึงคนไทย</span>
     <span class="brand-pill">🏆 รางวัลนานาชาติ</span>
-    <span class="brand-pill">🚀 Multi-format</span>
+    <span class="brand-pill">🚀 Multi-format (TV + YouTube + Shorts)</span>
   </div>
 </div>
 
-<div class="dna" style="background:#1a1a1a; border-left: 4px solid #F0A800; padding: 20px; border-radius: 8px; margin: 14px 0;">
-  <h4>🎤 Be STEAM Manifesto (ช่อง YouTube ใหม่)</h4>
+<div class="dna">
+  <h4>🎤 Be STEAM Manifesto</h4>
   <p>"<b>BESTEAM</b> เปิดโลเคชั่นแชร์เส้นทางการรับ ความรู้แนวใหม่ ที่กำลังฮิตติดเทรนด์ โดนใจทุกเพศทุกวัย ลูกเด็กเล็กแดง ตาสีตาสา ยายมียายมา ที่น่าสนใจและกำลังมาแรง ในโลกยุคสังคมโซเชี่ยล ด้วยส่วนผสมของ<b>สาระความรู้ แนวคิดแปลกๆ มันส์ๆ ตลกเฮฮา แถมจุดประกายไอเดียความสร้างสรรค์ โดยไม่มีคำว่าเป็นไปไม่ได้</b>"</p>
 </div>
 
-<div class="dna" style="background:#1a1a1a; border-left: 4px solid #F0A800; padding: 20px; border-radius: 8px; margin: 14px 0;">
+<div class="dna">
   <h4>🎨 Tone of Voice / โทนเสียง</h4>
   <ul>
     <li><b>สนุก แต่สาระ</b> — แอบสอนวิทยาศาสตร์แบบไม่รู้ตัว</li>
@@ -505,7 +670,7 @@
   </ul>
 </div>
 
-<div class="dna" style="background:#1a1a1a; border-left: 4px solid #F0A800; padding: 20px; border-radius: 8px; margin: 14px 0;">
+<div class="dna">
   <h4>👥 ทีมบริหาร (Executive Management)</h4>
   <p>4 คน (นามสกุล Sirichotchumnarn / Termsirikamol):</p>
   <ul>
@@ -524,13 +689,13 @@
   <div class="swot-box">
     <h4>💪 STRENGTHS • จุดแข็ง</h4>
     <ul>
-      <li><b>Library ใหญ่ที่สุดในไทย:</b> 2,103 ตอน ใน 14 programs</li>
-      <li><b>340M+ views บน YouTube</b> — 42 คลิป viral 1M+</li>
+      <li><b>Library ใหญ่ที่สุดในไทย:</b> 2,591 ตอน ใน 29 programs</li>
+      <li><b>585M+ views บน YouTube</b> — 45+ คลิป viral 1M+</li>
       <li><b>รางวัลนานาชาติ 29+:</b> Japan Prize, ABU, Prix Jeunesse, IPST</li>
       <li><b>20+ ปีประสบการณ์</b> + ทีมผู้บริหาร 4 คน</li>
-      <li><b>Co-production 3 ประเทศ:</b> 🇰🇷 EBSKorea, 🇯🇵 NHK, 🇩🇪 Goethe</li>
-      <li><b>Multi-platform:</b> TV + YouTube + FB + TikTok + LINE</li>
-      <li><b>Flagship "บ้านนักวิทยาศาสตร์น้อย":</b> 1,094 ตอน 218M views (64%)</li>
+      <li><b>Co-production 3 ประเทศ:</b> 🇰🇷 EBS, 🇯🇵 NHK, 🇩🇪 Goethe</li>
+      <li><b>Multi-platform:</b> TV + YouTube (2 ช่อง) + FB + TikTok + LINE</li>
+      <li><b>2 Flagships:</b> บ้านวิทย์ (218M) + H2OH (230M) = 76% views</li>
     </ul>
   </div>
   <div class="swot-box">
@@ -538,7 +703,7 @@
     <ul>
       <li><b>Pipeline ลดลง 80%:</b> Peak 271 (2022) → 51 (2026)</li>
       <li><b>Newer programs underperform:</b> Money Mindset, ภารกิจพิชิตฝัน, Mad Math</li>
-      <li><b>ขาด Teen content 13-18:</b> มีแค่ TIC TAC TECH</li>
+      <li><b>ขาด Teen content 13-18:</b> มีแค่ TIC TAC TECH + ภารกิจพิชิตฝัน (2 รายการ)</li>
       <li><b>ไม่มี Interactive/Live/AR-VR/Podcast</b></li>
       <li><b>Brand awareness:</b> คนไทยรู้จักรายการ แต่ไม่รู้จัก Be Amazing</li>
       <li><b>เว็บไซต์เก่า:</b> beamazing.co.th ไม่ค่อย update</li>
@@ -572,29 +737,29 @@
 </div>
 
 <!-- ============================== TOP VIRAL ============================== -->
-<h2>🔥 Top 20 Viral Champions (340M views)</h2>
+<h2>🔥 Top 20 Viral Champions (585M views)</h2>
 <table>
-<tr><th>#</th><th>Views</th><th>Title</th><th>Playlist</th></tr>
-<tr><td>1</td><td class="n viral">47,959,809</td><td>จระเข้ (บ้านนักวิทย์น้อย ปี 3)</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>2</td><td class="n viral">31,919,969</td><td>พืชกินแมลง (ชวนคิด)</td><td>คิดวิทย์</td></tr>
-<tr><td>3</td><td class="n viral">10,331,188</td><td>เล็บ (บ้านนักวิทย์น้อย ปี 3)</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>4</td><td class="n viral">8,507,197</td><td>ดินน้ำมัน</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>5</td><td class="n viral">8,073,068</td><td>งู (22 ม.ค. 60)</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>6</td><td class="n viral">7,389,642</td><td>สนุกกับชอล์ก</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>7</td><td class="n viral">7,259,682</td><td>ดินเหนียว</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>8</td><td class="n viral">7,121,821</td><td>สนุกกับดินสุดแข็งแกร่ง #Shorts</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>9</td><td class="n viral">5,707,800</td><td>ด้วงจอมพลัง</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>10</td><td class="n viral">5,564,161</td><td>หนอนแก้ว</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>11</td><td class="n viral">5,364,941</td><td>รังผึ้ง</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>12</td><td class="n viral">5,065,529</td><td>ไอศกรีม (บ้านนักวิทย์น้อย ปี 2)</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>13</td><td class="n viral">4,861,053</td><td>หอยทากนักเดินทาง</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>14</td><td class="n viral">4,542,424</td><td>เกราะกันภัยสัตว์ (ชวนคิด)</td><td>คิดวิทย์</td></tr>
-<tr><td>15</td><td class="n viral">4,537,573</td><td>เปลือกหอย</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>16</td><td class="n viral">4,342,399</td><td>มหัศจรรย์ปลาตีน</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>17</td><td class="n viral">4,334,973</td><td>หอยทากกระดุ๊กดิ๊ก</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>18</td><td class="n viral">3,796,830</td><td>ดิน (ชวนคิด)</td><td>คิดวิทย์</td></tr>
-<tr><td>19</td><td class="n viral">3,786,009</td><td>ตุ๊กแกน่ารัก</td><td>บ้านนักวิทยาศาสตร์น้อย</td></tr>
-<tr><td>20</td><td class="n viral">3,770,410</td><td>ฝึกวิทยายุทธเชิดสิงโต</td><td>Kid Rangers</td></tr>
+<tr><th>#</th><th>Views</th><th>Title</th><th>Program</th><th>Channel</th></tr>
+<tr><td>1</td><td class="n viral">47,959,809</td><td>จระเข้ (บ้านนักวิทย์น้อย ปี 3)</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>2</td><td class="n viral">31,919,969</td><td>พืชกินแมลง (ชวนคิด)</td><td>คิดวิทย์</td><td>ThaiPBS Kids</td></tr>
+<tr><td>3</td><td class="n viral">21,386,036</td><td>สเลอปี้ละลายหมด ! ทำไงดี ?</td><td>H2OH</td><td>Be STEAM</td></tr>
+<tr><td>4</td><td class="n viral">20,090,708</td><td>ขีปนาวุธ สงกรานต์!?</td><td>H2OH</td><td>Be STEAM</td></tr>
+<tr><td>5</td><td class="n viral">15,907,509</td><td>มายากลน้ำเปลี่ยนสี !?</td><td>H2OH</td><td>Be STEAM</td></tr>
+<tr><td>6</td><td class="n viral">10,331,188</td><td>เล็บ (บ้านนักวิทย์น้อย ปี 3)</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>7</td><td class="n viral">8,507,197</td><td>ดินน้ำมัน</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>8</td><td class="n viral">8,073,068</td><td>งู (22 ม.ค. 60)</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>9</td><td class="n viral">7,389,642</td><td>สนุกกับชอล์ก</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>10</td><td class="n viral">7,259,682</td><td>ดินเหนียว</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>11</td><td class="n viral">7,121,821</td><td>สนุกกับดินสุดแข็งแกร่ง #Shorts</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>12</td><td class="n viral">5,707,800</td><td>ด้วงจอมพลัง</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>13</td><td class="n viral">5,564,161</td><td>หนอนแก้ว</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>14</td><td class="n viral">5,364,941</td><td>รังผึ้ง</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>15</td><td class="n viral">5,065,529</td><td>ไอศกรีม (บ้านนักวิทย์น้อย ปี 2)</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>16</td><td class="n viral">4,861,053</td><td>หอยทากนักเดินทาง</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>17</td><td class="n viral">4,542,424</td><td>เกราะกันภัยสัตว์</td><td>คิดวิทย์</td><td>ThaiPBS Kids</td></tr>
+<tr><td>18</td><td class="n viral">4,537,573</td><td>เปลือกหอย</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>19</td><td class="n viral">4,342,399</td><td>มหัศจรรย์ปลาตีน</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
+<tr><td>20</td><td class="n viral">4,334,973</td><td>หอยทากกระดุ๊กดิ๊ก</td><td>บ้านนักวิทยาศาสตร์น้อย</td><td>ThaiPBS Kids</td></tr>
 </table>
 
 <!-- ============================== EVENTS & SERVICES ============================== -->
@@ -664,12 +829,12 @@
 
 <div class="dna" style="background:#1a1a1a; border-left: 3px solid #34d399;">
   <h4 style="color:#34d399">✅ Topic ที่ทำแล้ว (อย่า propose ซ้ำ)</h4>
-  <p>Money Mindset • คิดสิ...ต้องรอด (Survival) • Cyber Ranger (Cyber Safety) • TIC TAC TECH (Tech Literacy) • Kiddy Code (Computational) • ภารกิจพิชิตฝัน (Career) • Mad Math • สัตว์/แมลง/ธรรมชาติ (800+ ตอน)</p>
+  <p>Money Mindset • คิดสิ...ต้องรอด (Survival) • Cyber Ranger (Cyber Safety) • TIC TAC TECH (Tech Literacy) • Kiddy Code (Computational) • ภารกิจพิชิตฝัน (Career) • Mad Math • เชื่อไหมผู้ใหญ่บอกว่า (Fact vs Myth) • PlaySTEAMtion (Toys) • Nature เจอนี่ (Wildlife) • Think ต๊อง (Curiosity) • เฮ้ย จริงปะเนี่ย (Viral Facts) • Detective (Mystery) • เต็ม STEAM (Teacher) • STEM ไปไหน (Edu Travel)</p>
 </div>
 
 <div class="dna" style="background:#1a1a1a; border-left: 3px solid #F0A818;">
   <h4 style="color:#F0A818">🆕 Topic ที่ยังไม่มี = โอกาสใหม่</h4>
-  <p>🧠 <b>Mental Health เด็ก</b> | 🤖 <b>AI Literacy</b> (ใช้ AI สร้างสรรค์) | 🌱 <b>Climate Action/Sustainability</b> | 🎮 <b>Esports/Game Design</b> | 💕 <b>EQ/Relationship</b> | 🏃 <b>Sports/Physical</b> | 🎨 <b>Art/Music/Creative</b> | 👫 <b>Teen 13-18 เชิงลึก</b> | 🧬 <b>Health/Nutrition/Puberty</b> | 🧓 <b>Intergenerational</b> | 🌏 <b>ASEAN Cultures</b> | 🌗 <b>Live/Interactive</b> | 📱 <b>AR/VR/3D</b> | 🎙️ <b>Podcast</b></p>
+  <p>🧠 <b>Mental Health เด็ก</b> | 🤖 <b>AI Literacy Creative</b> | 🌱 <b>Climate Action/Sustainability</b> | 🎮 <b>Esports/Game Design</b> | 💕 <b>EQ/Relationship</b> | 🏃 <b>Sports/Physical</b> | 🎨 <b>Art/Music/Creative</b> | 👫 <b>Teen 13-18 เชิงลึก</b> | 🧬 <b>Health/Nutrition/Puberty</b> | 🧓 <b>Intergenerational</b> | 🌏 <b>ASEAN Cultures</b> | 🌗 <b>Live/Interactive</b> | 📱 <b>AR/VR/3D</b> | 🎙️ <b>Podcast</b></p>
 </div>
 
 <!-- ============================== STRATEGIC IDEAS ============================== -->
@@ -679,7 +844,7 @@
   <h4>🔴 Priority #1: เร่ง Pipeline กลับเข้า 200+ ตอน/ปี</h4>
   <p><b>ปัญหา:</b> Pipeline ลด 80% (271 → 51 ตอน)</p>
   <p><b>แนวทาง:</b> AI/automation ตัดต่อ + repurposing content เก่าเป็น Shorts/Clip</p>
-  <p><b>Quick win:</b> เอา 1,094 ตอนเก่าของ "บ้านนักวิทย์น้อย" ตัดเป็น Shorts (60s)</p>
+  <p><b>Quick win:</b> เอา 1,094 ตอนเก่าของ "บ้านนักวิทย์น้อย" + 195 ตอนของ "H2OH" ตัดเป็น Shorts (60s) → 2,500+ Shorts ใหม่</p>
 </div>
 
 <div class="idea-card priority-high">
@@ -689,8 +854,8 @@
 </div>
 
 <div class="idea-card priority-high">
-  <h4>🔴 Priority #3: License "บ้านนักวิทย์น้อย" ไปอาเซียน</h4>
-  <p><b>Asset:</b> 1,094 ตอน 218M views เป็นหลักฐานว่า content ดี</p>
+  <h4>🔴 Priority #3: License "บ้านนักวิทย์น้อย" + "H2OH" ไปอาเซียน</h4>
+  <p><b>Asset:</b> 2 Flagships = 1,289 ตอน 449M views เป็นหลักฐานว่า content ดี</p>
   <p><b>Revenue model:</b> License fee + Royalty 5-10% ต่อตอน</p>
 </div>
 
@@ -701,7 +866,7 @@
 
 <div class="idea-card priority-med">
   <h4>🟡 Priority #5: ขยาย Teen Segment (13-18 ปี)</h4>
-  <p><b>Gap:</b> มีแค่ TIC TAC TECH (33 ep, 44K views) — Teen ตลาดใหญ่ แต่ไม่มี content</p>
+  <p><b>Gap:</b> มีแค่ TIC TAC TECH + ภารกิจพิชิตฝัน (2 รายการ) — Teen ตลาดใหญ่ แต่ยังไม่ครอบคลุม</p>
   <p><b>แนวทาง:</b> รายการใหม่ "Real Teen" — เด็กวัยรุ่นแก้ปัญหาจริง</p>
 </div>
 
@@ -717,15 +882,15 @@
 
 <div class="idea-card priority-low">
   <h4>🟢 Priority #8: Merchandise / Character Licensing</h4>
-  <p><b>Asset:</b> ตัวละครจาก "บ้านนักวิทย์น้อย" → License ของเล่น/เสื้อผ้า</p>
+  <p><b>Asset:</b> ตัวละครจาก "บ้านนักวิทย์น้อย" + "H2OH" → License ของเล่น/เสื้อผ้า</p>
 </div>
 
 <div class="accent-line"></div>
 
 <div class="footer">
-  📁 Source: <b>beamazing.co.th</b> + YouTube (ThaiPBS Kids, NSMThailand, ALTV4) | 
-  📅 Dashboard v6 updated: 2026-07-25 | 
-  📊 Dataset: <b>2,103 วิดีโอ, 340.5M views, 14 programs, 5 co-pro, 29+ awards</b><br>
+  📁 Source: <b>beamazing.co.th</b> + YouTube (ThaiPBS Kids, Be STEAM, NSMThailand, ALTV4) | 
+  📅 Dashboard v8 updated: 2026-07-25 | 
+  📊 Dataset: <b>2,591 วิดีโอ, 585M views, 29 programs (14 TPBS Kids + 15 Be STEAM), 5 co-pro, 29+ awards</b><br>
   🎨 <b>CI Colors:</b> #F0A800 (Gold) + #0a0a0a (Black) | 
   🌐 <b>Live URL:</b> <a href="https://linwornfong.github.io/ba-dashboard/">https://linwornfong.github.io/ba-dashboard/</a>
 </div>
